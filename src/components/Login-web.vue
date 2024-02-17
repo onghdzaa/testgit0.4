@@ -24,8 +24,8 @@
    
   </div>
       <div class="option">
-        <ul><button class="btn" style="border-radius: 25px;"><img class="icon" src="../assets/img/google.png"> Home</button> </ul>
-        <ul><button class="btn" style="border-radius: 25px;"><img class="icon" src="../assets/img/facebook.png"> Menu</button></ul>
+        <ul><router-link to="/city"><button class="btn" style="border-radius: 25px;"><img class="icon" src="../assets/img/google.png"> Home</button></router-link> </ul>
+        <ul><router-link to="/citynext"><button class="btn" style="border-radius: 25px;"><img class="icon" src="../assets/img/facebook.png"> Menu</button></router-link></ul>
         <ul><button class="btn" style="border-radius: 25px;"><img class="icon" src="../assets/img/twitter.png"> Trash</button></ul>
       </div>
       </div>

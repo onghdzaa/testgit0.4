@@ -34,14 +34,15 @@ export default {
 
 
 <style >
-body {margin:0;}
+body {margin:0px;}
 .topnav {
+ margin-left: 0px;
     width: 100%;
   background-color: #333;
-  overflow: auto;
+  /* overflow: auto; */
   opacity: 0.5;
   overflow: hidden;
-  position: fixed;
+  /* position: fixed; */
   bottom: 0;
 }
 .topnav a1 {

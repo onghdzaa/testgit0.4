@@ -55,6 +55,7 @@
     border-width: 20px;
     width: 400px;
   }
+
 /* .backimage{ */
   /* background-size: contain;
   background-repeat: no-repeat;

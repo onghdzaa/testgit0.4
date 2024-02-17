@@ -53,7 +53,87 @@ const routes = [
 
     component: () => import(/* webpackChunkName: "about" */ '../components/Select-web.vue')
   },
-  
+  {
+  path: '/navhome',
+  name: 'navhome',
+  //route level code-splitting
+  // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../components/Nav-home.vue')
+  },
+  {
+  path: '/location',
+  name: 'location',
+  //route level code-splitting
+  // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../components/Location-web.vue')
+  },
+  {
+    path: '/review',
+    name: 'review',
+    //route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import(/* webpackChunkName: "about" */ '../components/Review-web.vue')
+    },
+    {
+      path: '/menumap',
+      name: 'menumap',
+      //route level code-splitting
+      // this generates a separate chunk (about.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () => import(/* webpackChunkName: "about" */ '../components/Menu-map.vue')
+      },
+      {
+        path: '/city',
+        name: 'city',
+        //route level code-splitting
+        // this generates a separate chunk (about.[hash].js) for this route
+          // which is lazy-loaded when the route is visited.
+          component: () => import(/* webpackChunkName: "about" */ '../components/City-web.vue')
+        },
+        {
+          path: '/gl',
+          name: 'gl',
+          //route level code-splitting
+          // this generates a separate chunk (about.[hash].js) for this route
+            // which is lazy-loaded when the route is visited.
+            component: () => import(/* webpackChunkName: "about" */ '../citymain/Cityimg-web.vue')
+          },
+          {
+            path: '/ct',
+            name: 'ct',
+            //route level code-splitting
+            // this generates a separate chunk (about.[hash].js) for this route
+              // which is lazy-loaded when the route is visited.
+              component: () => import(/* webpackChunkName: "about" */ '../citymain/Citytext-web.vue')
+            },
+            {
+              path: '/citynext',
+              name: 'citynext',
+              //route level code-splitting
+              // this generates a separate chunk (about.[hash].js) for this route
+                // which is lazy-loaded when the route is visited.
+                component: () => import(/* webpackChunkName: "about" */ '../components/City-next.vue')
+              },
+              {
+                path: '/glfac',
+                name: 'glfac',
+                //route level code-splitting
+                // this generates a separate chunk (about.[hash].js) for this route
+                  // which is lazy-loaded when the route is visited.
+                  component: () => import(/* webpackChunkName: "about" */ '../citymain/Cityimgfac-web.vue')
+                },
+                {
+                  path: '/ctnav',
+                  name: 'ctnav',
+                  //route level code-splitting
+                  // this generates a separate chunk (about.[hash].js) for this route
+                    // which is lazy-loaded when the route is visited.
+                    component: () => import(/* webpackChunkName: "about" */ '../citymain/Citynav-web.vue')
+                  },
+    
 ]
 
 const router = createRouter({

@@ -1,16 +1,18 @@
 <template>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <div class="hello">
     <div class="hello1">
     <!-- <h1>{{ msg }}</h1> -->
-    <h3>Request for Specific info</h3>
+    <!-- <div style="width: 100%; height: 10%;"> </div> -->
+    <h3 style="font-size:4vw;">Request for Specific info</h3>
     <ul>
      
  
       <!-- <li><button v-on:click="redirect_to_login"><img v-bind:src="imgmain" > </button></li> -->
       <!-- <li><img id ="img1" @click="counters()" @mouseover="setNewimg(imgmain)" @mouseout="setOldimg(imgmain)" src="../assets/icon/LM.png"></li> -->
-      <li><img v-bind:src="imgmain" @click="counters()" @mouseover="setNewimg(imgmain)" @mouseout="setOldimg(imgmain)"></li> 
-      <li><img v-bind:src="imgmain" @click="counters()" @mouseover="setNewimg(imgmain)" @mouseout="setOldimg(imgmain)"></li>
-      <li><img v-bind:src="imgmain" @click="counters()" @mouseover="setNewimg(imgmain)"  @mouseout="setOldimg(imgmain)"></li>
+      <li><img v-bind:src="imgmain" style="width: 100%;" @click="counters()" @mouseover="setNewimg(imgmain)" @mouseout="setOldimg(imgmain)"></li> 
+      <li><img v-bind:src="imgmain" style="width: 100%;" @click="counters()" @mouseover="setNewimg(imgmain)" @mouseout="setOldimg(imgmain)"></li>
+      <li><img v-bind:src="imgmain" style="width: 100%;" @click="counters()" @mouseover="setNewimg(imgmain)"  @mouseout="setOldimg(imgmain)"></li>
      <!-- //<button @click="counters()">Add 1</button> -->
     
 
@@ -21,31 +23,32 @@
         <div class="root">
       <button @click="countersx()"
                         class="btn btn-info" 
-                        style="background-color: #17A2BB; width: 500px; height: 100px; font-size: 4ch;  border-radius: 25px;
-                        color : #fff ">CONFIRM
+                        style="background-color: #525495; width: 30%; height: 50px;  border-radius: 8px ; border-color: #fff;
+                        color : #fff  "> <p style="margin: 0px; font-size:1vw;">CONFIRM</p>
                         </button>
                        
                         <div class="modal" v-if="isOpen">
                           
-                         <div class="hello">
-                          <div class="hello1">
- <button @click="isOpen= false"
+                         <div class="hello2">
+                          <div class="hello12">
+                            <!-- <img src="../assets/img/x-mark.png" style="width: 5%; float: right;" alt=""> -->
+                            <div class="box">
+                        <div class="itm1" >
+                            <button onclick="location.href='/select'"
                           class="btn btn-info" 
-                          style="background-color: #17A2BB; width: 500px; height: 125px; font-size: 4ch;  border-radius: 25px;
-                           color : #fff ">Continue as a guest
+                          style="background-color: #17A2BB; width: 100%; height: 50px;   border-radius: 25px;
+                           color : #fff "><p style="margin: 0px; font-size:2vw;">Continue as a guest</p>
                         </button> 
-                          <ul>
-                            <li>
+                         </div>
+                         <div class="itm1">
                               <router-link to="/login"><button @click="isOpen= false"
                           class="btn btn-info" 
-                          style="background-color: #17A2BB;  width: 500px; height: 125px; font-size: 4ch;  border-radius: 25px;
-                           color : #fff ">Log In / Sign Up
+                          style="background-color: #17A2BB;  width: 100%; height: 50px;  border-radius: 25px;
+                           color : #fff "><p style="margin: 0px; font-size:2vw;">Log In / Sign Up</p>
                          </button></router-link>
-                      </li>
-                    </ul>
-                      <ul>
-                         
-                       </ul>
+                        </div>
+                 
+                     </div>
                       </div>
                         </div>
                     </div> 
@@ -155,7 +158,23 @@ export default {
 //   border-radius: 10px;
 // }
 .hello{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+bottom: 0;
+z-index: 99;
+background-color: rgba(0, 0, 0, 0.2);
+display: flex;
+align-items: center;
+justify-content: center;
 
+}
+.box{
+  width: 100%;
+  height: 50%;
+}
+.hello2{
   position: fixed;
   top: 0;
   left: 0;
@@ -183,25 +202,43 @@ button{
   border-radius: 5px;
   overflow: hidden;
   background-color: #2f3e5c;
-}.helloq{
-  width: 39cm;
-   height: 18cm;
-   border-radius: 25px;
-  background-color: #2f3e5c;
-  padding: 32px;
 }
 .hello1{
-   width: 39cm;
-   height: 18cm;
+  max-width: 50%;
+   height: 60%;
    border-radius: 25px;
   background-color: #2f3e5c;
   padding: 32px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.hello12{
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  display: grid;
+  grid-template-columns: auto auto;
+   width: 50%;
+   height: 60%;
+   border-radius: 25px;
+  background-color: #2f3e5c;
+  padding: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.itm1{
+ padding-left: 25%;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+  width: 50%;
 }
 h3 {
   font-size: 5ch;
   margin: 40px 0 0;
-
-}
+color: white;}
 ul {
   list-style-type: none;
   padding: 0;
@@ -209,6 +246,7 @@ ul {
 li {
   display: inline-block;
   margin: 0 10px;
+  width: 20%;
 }
 a {
   color: #42b983;

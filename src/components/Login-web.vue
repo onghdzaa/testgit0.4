@@ -1,13 +1,13 @@
 <template>
     <div class="backimage">
       <div class="login">
-      <h1>Log In</h1>
+      <h1 style="text-align: left; padding-left: 30%;">Log In</h1>
       <div id="main">
         <nav v-bind:class="active" v-on:click.prevent>
           <a href="#" class="logins" v-on:click="makeActive('logins')">Login</a> 
           <router-link to="/register"> <a href="#" class="register" v-on:click="makeActive('register')">Register</a></router-link>
         </nav>
-        <p>CHOOSE {{ active }}</p>
+        <!-- <p>CHOOSE {{ active }}</p> -->
       </div>
       <div class="container">
         <!-- <ul><label for="uname"><b>Username</b></label></ul> -->
@@ -15,18 +15,22 @@
 
         <!-- <ul><label for="psw"><b>Password</b></label></ul> -->
         <ul> <input type="password" placeholder="Enter Password" name="psw" required></ul>
-        <div class="container"><input type="checkbox" checked="checked" name="remember"> Remember me
-          <li><span class="psw"> <a href="#">Forgotpassword?</a></span></li>
+        <div class="container">
+          <div class="remem" style="float: left; padding-left: 20%;">
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+          </div>
+          <span class="psw" style="float: right; padding-right: 20%;"> <a href="#">Forgotpassword?</a></span>
         </div>
+       </div>
+    <div class="option">
+      <div class="option1">
+    <button class="btn" style="border-radius: 25px;width: 50%;">Login</button>
+   </div>
+ 
       
-    
-    <ul><button class="btn" style="border-radius: 25px;">Login</button></ul>
-   
-  </div>
-      <div class="option">
-        <ul><router-link to="/city"><button class="btn" style="border-radius: 25px;"><img class="icon" src="../assets/img/google.png"> Home</button></router-link> </ul>
-        <ul><router-link to="/citynext"><button class="btn" style="border-radius: 25px;"><img class="icon" src="../assets/img/facebook.png"> Menu</button></router-link></ul>
-        <ul><button class="btn" style="border-radius: 25px;"><img class="icon" src="../assets/img/twitter.png"> Trash</button></ul>
+        <button onclick="location.href='/city'"  class="btn1" style="border-radius: 25px; width: 50%;"><img class="icon" src="../assets/img/google.png"> Home</button> 
+        <button onclick="location.href='/citynext'" class="btn2" style="border-radius: 25px;width: 50%;"><img class="icon" src="../assets/img/facebook.png"> Menu</button>
+        <button class="btn3" style="border-radius: 25px;width: 50%;"><img class="icon" src="../assets/img/twitter.png"> Trash</button>
       </div>
       </div>
     </div>
@@ -35,7 +39,9 @@
   export default {
  
   data() {
+    
     return {  
+      
  active:'logins'
     };
   }
@@ -58,6 +64,12 @@
   /* .btn_group{
     
   } */
+  body {
+  background-image: url("../assets/img/BG1.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
   *{
     margin: 0;
     padding: 0;
@@ -77,7 +89,7 @@
     text-decoration: none;
   }
   nav{
-    width: 430px;
+    width: 50%;
             
     display: inline-block;
     margin: 60px auto 45px;
@@ -87,13 +99,13 @@
   }
   nav a{
     display: inline-block;
-    padding: 18px 30px;
+    padding: 4px 30px;
     color: #000000 !important;
     font-weight: bold;
     font-size: 18px;
     text-decoration: none;
     line-height: 1;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     background-color: transparent;
     transition: background-color 0.25s;
   }nav a:first-child{
@@ -114,6 +126,9 @@
     font-weight: bold;
     color: #7d9098;
   }
+  .option1{
+    padding-bottom: 2%;
+  }
   p b{
     color: #fff;
     display: inline-block;
@@ -123,40 +138,64 @@
     text-transform: uppercase;
   }
   .login{
-    width: 35cm;
+    width: 50%;
    height: 100%;
    border-radius: 25px;
   background-color: white;
   padding: 32px;
   display: inline-block;
+  
   margin: 0 10px;
   }
 .backimage{
   /* background-size: contain;
   background-repeat: no-repeat;
   width: 200px; */
-  height: 90vh;
-background-image:url(../assets/img/BG1.png) ;
+  /* height: 90vh;
+background-image:url(../assets/img/BG1.png) ; */
 
   }
   /* Style buttons */
-.btn {
-  margin: auto;
+  .btn1,.btn3,.btn2{
+    margin: auto;
   top: 5%;
   position: relative;
-    height: 2rem;
-    width: 50%;
+    height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     
-    font-size: 1.1rem;
-    padding: 1.8rem 15rem;
+    /* font-size: ; */
+    /* padding: 1.8rem 15rem; */
+    font-weight: 600;
+    user-select: none;
+    border-radius: 4px;
+    background-color: #f2f2f2;
+  }
+.btn {
+  margin: auto;
+  top: 5%;
+  position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* font-size: ; */
+    /* padding: 1.8rem 15rem; */
     font-weight: 600;
     user-select: none;
     border-radius: 4px;
 }
-
+.option{
+  display: grid;
+  width: 100%;
+  height: 230px;
+  gap: 10%;
+  /* padding-bottom: 10%; */
+}
     input[type=text],input[type=password] {
       border-radius: 25px;
       margin: auto;
@@ -173,13 +212,19 @@ background-image:url(../assets/img/BG1.png) ;
   margin: 0px 30px 0 250px;
 }
 /* Darker background on mouse-over */
-.btn:hover {
+.btn2:hover {
+  background-color: RoyalBlue;
+}
+.btn1:hover {
+  background-color: RoyalBlue;
+}
+.btn3:hover {
   background-color: RoyalBlue;
 }
 .icon{
   position: absolute;
-      width: 3rem;
-      height: 3rem;
+      width: 6%;
+      
       left: 0;
       /* background-color: $color__white; */
       border-radius: 3px;

@@ -17,7 +17,7 @@
 
 </div>  <div class="re" style="float: right;">review</div>
 </ul>
-        Wat Phumin is a Buddhist temple located at the center of the city of Nan, 
+Wat Phumin is a Buddhist temple located at the center of the city of Nan, 
   in the northern region of Thailand. The temple was built in 1596 and had 
   been through several restorations. The temple is an example of the 
   traditional Lanna style of architecture, which was known for its distinctive 
@@ -47,8 +47,8 @@
     .grid-containerx {
       display: grid;
       width: 99%;
-      grid-template-columns: 500px auto   ;
-      grid-template-rows: auto auto;
+    grid-template-columns: 50% auto   ; 
+      /* grid-template-rows: auto auto;  */
       /* gap: 10px; */
       /* background-color: #2196F3; */
       padding: 10px;
@@ -115,7 +115,9 @@ position: relative;
       
     } */
     .sizeimgct{
-    width: 99%;
+      object-fit: cover;
+      max-width: 99%;
+    /* width: 99%; */
     height: 99%;
     }
     

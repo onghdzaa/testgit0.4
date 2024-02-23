@@ -3,7 +3,8 @@
     <div class="row">
         
         <div class="centercolumn">
-            <div class="card" style="height: 970px;"> 
+            <div class="card"> 
+           
     <Menu></Menu>
         </div>
     </div>
@@ -71,15 +72,10 @@ body {
 /* Right column */
 .centercolumn {
   float: left;
-  width: 23.5%;
+  width: 24%;
   padding-left: 80px;
 }
-.rightcolumn {
-  float: left;
-  width: 26%;
-  /* background-color: #f1f1f1; */
-  padding-left: 20px;
-}
+
 
 /* Fake image */
 .fakeimg {

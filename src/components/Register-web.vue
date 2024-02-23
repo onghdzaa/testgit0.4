@@ -1,13 +1,12 @@
 <template>
     <div class="backimage">
       <div class="login">
-      <h1>Register</h1>
+      <h1 style="text-align: left; padding-left: 30%;">Register</h1>
       <div id="main">
         <nav v-bind:class="active" v-on:click.prevent>
             <router-link to="/login"> <a href="#" class="logins" v-on:click="makeActive('logins')">Login</a> </router-link>
           <a href="#" class="register" v-on:click="makeActive('register')">Register</a>
         </nav>
-        <p>CHOOSE {{ active }}</p>
       </div>
       <div class="container">
         <!-- <ul><label for="uname"><b>Username</b></label></ul> -->
@@ -17,9 +16,7 @@
         <ul> <input type="password" placeholder="E-mail" name="psw" required></ul>
         <ul> <input type="email" placeholder="Password" name="psw" required></ul>
         <ul> <input type="confirmpassword" placeholder="Confirm Password" name="psw" required></ul>
-        <div class="container"><input type="checkbox" checked="checked" name="remember"> Remember me
-          <li><span class="psw"> <a href="#">Forgotpassword?</a></span></li>
-        </div>
+       
       <div class="table">
         
             Requirements
@@ -29,11 +26,11 @@
    
   </div>
       <div class="option">
-        <ul><button @click="countersx()" class="btn1" ><img class="icon"  src="../assets/icon/S11-2.gif"><img class="icon" style=" margin-left: 5rem;" src="../assets/icon/S11-2.gif"> Home<img class="icon1" src="../assets/icon/next.png"></button> </ul>
+        <ul><button @click="countersx()" class="btn1" ><img class="icon"  src="../assets/icon/S11-2.gif"><img class="icon" style=" margin-left: 5%;" src="../assets/icon/S11-2.gif"> Home<img class="icon1" src="../assets/icon/next.png"></button> </ul>
         <PopUP @close="isOpen= false" v-if="isOpen"><h2>pppp</h2></PopUP>
-        <ul><button @click="countersx()" class="btn1" ><img class="icon" src="../assets/img/facebook.png"><img class="icon" style=" margin-left: 5rem;" src="../assets/icon/S11-2.gif"> Menu<img class="icon1" src="../assets/icon/next.png"></button></ul>
+        <ul><button @click="countersx()" class="btn1" ><img class="icon" src="../assets/img/facebook.png"><img class="icon" style=" margin-left: 5%;" src="../assets/icon/S11-2.gif"> Menu<img class="icon1" src="../assets/icon/next.png"></button></ul>
         <PopUP @close="isOpen= false" v-if="isOpen"><h2>pppp</h2></PopUP>
-        <ul><button class="btn1" ><img class="icon" src="../assets/img/twitter.png"><img class="icon" style=" margin-left: 5rem;" src="../assets/icon/S11-2.gif"> Trash<img class="icon1" src="../assets/icon/next.png"></button></ul>
+        <ul><button class="btn1" ><img class="icon" src="../assets/img/twitter.png"><img class="icon" style=" margin-left: 5%;" src="../assets/icon/S11-2.gif"> Trash<img class="icon1" src="../assets/icon/next.png"></button></ul>
         <!-- <PopUP :label="label"><h2>pppp</h2></PopUP> -->
         <!-- <ul> <router-link to="/login"></router-link></ul> -->
       </div>
@@ -86,12 +83,14 @@
     padding: 0;
     box-sizing: border-box;
   }
-  body{
-    /* font-family: ; */
-    color: #2f3e5c;
-    text-align: center;
-    font-size: 16px;
-  }
+  
+    body {
+  background-image: url("../assets/img/BG1.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+  
   a,a:visited{
     outline: none;
     color: aqua;
@@ -146,8 +145,8 @@
     text-transform: uppercase;
   }
   .login{
-    width: 35cm;
-   height: 100%;
+    width: 50%;
+    height: auto;
    border-radius: 25px;
   background-color: white;
   padding: 32px;
@@ -158,8 +157,7 @@
   /* background-size: contain;
   background-repeat: no-repeat;
   width: 200px; */
-  height: 90vh;
-background-image:url(../assets/img/BG1.png) ;
+
 
   }
   /* Style buttons */
@@ -174,7 +172,7 @@ background-image:url(../assets/img/BG1.png) ;
     justify-content: center;
     
     font-size: 1.1rem;
-    padding: 1.8rem 15rem;
+    /* padding: 1.8rem 15rem; */
     font-weight: 600;
     user-select: none;
     border-radius: 4px;
@@ -190,7 +188,7 @@ background-image:url(../assets/img/BG1.png) ;
     justify-content: center;
     user-select: none;
     font-size: 1.1rem;
-    padding: 1.8rem 15rem;
+    /* padding: 1.8rem 15rem; */
     font-weight: 600;
     /* user-select: none; */
     /* border-radius: 4px; */
@@ -217,12 +215,12 @@ background-image:url(../assets/img/BG1.png) ;
 }
 .icon{
   position: absolute;
-      width: 3rem;
-      height: 3rem;
+      width: 3%;
+      /* height: 100%; */
       left: 0;
       /* background-color: $color__white; */
       border-radius: 3px;
-      margin-left: 1rem;
+      margin-left: 1%;
 }
 .icon1{
   position: absolute;

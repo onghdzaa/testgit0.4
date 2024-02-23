@@ -1,14 +1,16 @@
 <template>
     <div class="backimage">
-      <ul>
-        
-        <li><img class="icon" src="../assets/img/boat.jpg"></li>
-      <li><img class="icon" src="../assets/img/boat.jpg"></li>
-      </ul>
-      <ul>
-      <li><img class="icon" src="../assets/img/boat.jpg"></li>
-      <li><img class="icon" src="../assets/img/boat.jpg"></li>
-    </ul>
+      
+        <div class="group">
+          <div class="group1"><a href="/selectmap"><img class="icon" src="../assets/img/ss1.png"></a></div>
+          <div class="group1"><img class="icon" src="../assets/img/ss3.png"></div>
+          <div class="group1"><img class="icon" src="../assets/img/ss2.png"></div>
+          <div class="group1"><img class="icon" src="../assets/img/ss4.png"></div>
+        <!-- 
+    <img class="icon" src="../assets/img/boat.jpg">
+     <img class="icon" src="../assets/img/boat.jpg">
+      <img class="icon" src="../assets/img/boat.jpg"> -->
+  </div>
     </div>
     <div class="navbar">
     <navbar></navbar></div>
@@ -42,20 +44,62 @@
   background-attachment: fixed;
   background-size: 100% 100%;
 }
+.backimage{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px;
+}
   /* .btn_group{
     
   } */
   *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
   }
   .icon{
     border-style: solid;
-    border-width: 20px;
-    width: 400px;
+  border-color: white;
+  border-width: 10px;
+  /* border-color: white; */
+  border-width: 10px;
+    width: 94%;
   }
-
+.group{
+  display: grid;
+  grid-template-columns: auto auto;
+    width: 40%;
+    /* background-color: white; */
+    gap: 30px;      /* border-left: 5px solid gray; */
+}
+.grou1{
+width: 100%;
+}
+@media only screen and (max-width: 600px) {
+  .group{
+  display: grid;
+    width: 100%;
+    grid-template-columns: 100%, 100% ;
+    /* background-color: white; */
+    gap: 20px;      /* border-left: 5px solid gray; */
+    
+}
+.icon{
+    border-style: solid;
+  border-color: white;
+  /* border-width: 10px; */
+  /* border-color: white; */
+  border-width: 2px;
+    width: 100%;
+  }
+  .backimage{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+}
 /* .backimage{ */
   /* background-size: contain;
   background-repeat: no-repeat;

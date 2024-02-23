@@ -37,8 +37,8 @@ body {margin:0;}
 .topnavhome {
     width: 100%;
   background-color: #333;
-  overflow: auto;
-  opacity: 0.5;
+  /* overflow: auto; */
+  opacity: 1;
   overflow: hidden;
   /* position: fixed; */
  /* float: bottom; */

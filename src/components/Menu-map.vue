@@ -5,7 +5,7 @@
     <h2 style="text-align: center;">cut</h2>
     <p style="text-align: center;">ss</p>
     <div class="laout1me">
-      <select style="width: 200px; height: 30px;" name="subject" id="subject">
+      <select style="width: 50%; height: 34%;" name="subject" id="subject">
         <option value="" selected="selected">Select subject</option>
       </select>
       <div class="review">
@@ -25,6 +25,7 @@
       <div class="grid-item"><img class="sizeimg" src="../assets/icon/S7-1.png">1</div>
       <div class="grid-item"><img class="sizeimg" src="../assets/icon/S7-1.png">1</div>
     </div>
+    <button>xssssss</button>
   </div>
   <!-- <div class="flex-container">
       <div><img src="../assets/icon/S7-1.png"></div>
@@ -53,7 +54,7 @@ export default {
 </script>
 <style>
 .grid-item1 {
-  height: 100px;
+  height: 50px;
 }
 
 .grid-container {
@@ -61,17 +62,22 @@ export default {
   grid-template-columns: 3;
  
 }
-
+input[type="range"] {
+  width:100%;
+  max-width: 200px;
+}
 .sizeimg {
   float: left;
-  width: 30px;
-  padding-right: 10px;
+  width: 15%;
+  padding-right: 5%;
 }
 
 .grid-item {
   background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 10px;
+  padding: 2%;
+  width: 100%;
+  min-width: 20px;
   /* display: inline-block;
   display: flex;
   position: relative;
@@ -86,24 +92,26 @@ export default {
 
 .review {
   border: 2px;
-  width: 200px;
-  height: 30px;
+  width: 50%;
+  height: 30%;
   background-color: white;
   margin: auto;
 }
 
 .laout1me {
   background-color: grey;
-  height: 100px;
+  height: 50px;
 }
 
 .iconmap {
-  widows: 450px;
+  width: 100%;
+  height: 200px;
+  /* widows: 450px; */
 }
 
 .map {
-  width: 350px;
-  height: 500px;
+  width: 100%;
+  height: 100%;
 }
 
 p {
@@ -111,6 +119,7 @@ p {
 }
 
 h2 {
+  margin-top:0px ;
   margin-bottom: 0px;
 }
 

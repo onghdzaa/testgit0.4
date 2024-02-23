@@ -80,7 +80,7 @@
         </div>
         <div class="con">
           <div class="item1zzzz">
-            <a href="/city">
+            <a :href="$router.resolve({name: 'city'}).href">
             <img class="icon" src="../assets/img/s1.png" />
             </a>
           </div>

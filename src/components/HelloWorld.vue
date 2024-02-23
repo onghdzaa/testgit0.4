@@ -34,11 +34,11 @@
                             <!-- <img src="../assets/img/x-mark.png" style="width: 5%; float: right;" alt=""> -->
                             <div class="box">
                         <div class="itm1" >
-                            <button onclick="location.href='/select'"
+                         <router-link to="/select">   <button 
                           class="btn btn-info" 
                           style="background-color: #17A2BB; width: 100%; height: 50px;   border-radius: 25px;
                            color : #fff "><p style="margin: 0px; font-size:2vw;">Continue as a guest</p>
-                        </button> 
+                        </button> </router-link>
                          </div>
                          <div class="itm1">
                               <router-link to="/login"><button @click="isOpen= false"
@@ -60,8 +60,8 @@
 </template>
 
 <script>
-
-// import imgscipop from '@/components/Scipop.vue'
+// import select from '../components/Select-web.vue'
+// import imgscipop from '@/components/'
 export default {
   // components: {
   //   imgscipop
@@ -77,6 +77,7 @@ export default {
     imgexit: require("../assets/icon/zz.png"),
     isOpen: false,
     tst:"string",
+    // select
       //  list:[{
       //   pg:1,
       //   pgsrc: require("../assets/icon/LM.png")

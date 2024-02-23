@@ -2,7 +2,7 @@
     <div class="backimage">
       
         <div class="group">
-          <div class="group1"><a href="/selectmap"><img class="icon" src="../assets/img/ss1.png"></a></div>
+          <div class="group1"><a :href="$router.resolve({name: 'selectmap'}).href"><img class="icon" src="../assets/img/ss1.png"></a></div>
           <div class="group1"><img class="icon" src="../assets/img/ss3.png"></div>
           <div class="group1"><img class="icon" src="../assets/img/ss2.png"></div>
           <div class="group1"><img class="icon" src="../assets/img/ss4.png"></div>

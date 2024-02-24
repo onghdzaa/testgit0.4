@@ -1,5 +1,5 @@
 <template>
-  <div class="backimage">
+ 
     <div class="grid-containerxxz">
       <div class="item1">
         <div class="navmapcss">
@@ -80,9 +80,9 @@
         </div>
         <div class="con">
           <div class="item1zzzz">
-            <a :href="$router.resolve({name: 'city'}).href">
+            <router-link to="/city"> 
             <img class="icon" src="../assets/img/s1.png" />
-            </a>
+            </router-link>
           </div>
           <div class="item1zzzz">
             <img class="icon" src="../assets/img/s2.png" />
@@ -96,7 +96,7 @@
         </div>
       </div>
     </div>
-  </div>
+
   <div class="navbar">
     <navbar></navbar>
   </div>

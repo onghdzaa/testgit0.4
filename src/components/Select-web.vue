@@ -2,10 +2,10 @@
     <div class="backimage">
       
         <div class="group">
-          <div class="group1"><a :href="$router.resolve({name: 'selectmap'}).href"><img class="icon" src="../assets/img/ss1.png"></a></div>
-          <div class="group1"><img class="icon" src="../assets/img/ss3.png"></div>
-          <div class="group1"><img class="icon" src="../assets/img/ss2.png"></div>
-          <div class="group1"><img class="icon" src="../assets/img/ss4.png"></div>
+          <div class="group1"><router-link to="/selectmap"><img class="iconselect" src="../assets/img/ss1.png"></router-link></div>
+          <div class="group1"><img class="iconselect" src="../assets/img/ss3.png"></div>
+          <div class="group1"><img class="iconselect" src="../assets/img/ss2.png"></div>
+          <div class="group1"><img class="iconselect" src="../assets/img/ss4.png"></div>
         <!-- 
     <img class="icon" src="../assets/img/boat.jpg">
      <img class="icon" src="../assets/img/boat.jpg">
@@ -42,7 +42,8 @@
   background-image: url('../assets/img/BG1.png');
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 100% 100%;
+  background-size: 100% 100%;  
+  
 }
 .backimage{
   display: flex;
@@ -58,7 +59,7 @@
     padding: 0;
     /* box-sizing: border-box; */
   }
-  .icon{
+  .iconselect{
     border-style: solid;
   border-color: white;
   border-width: 10px;
@@ -85,7 +86,7 @@ width: 100%;
     gap: 20px;      /* border-left: 5px solid gray; */
     
 }
-.icon{
+.iconselect{
     border-style: solid;
   border-color: white;
   /* border-width: 10px; */

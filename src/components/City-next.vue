@@ -134,6 +134,9 @@ margin-top: 0px;
   padding-left: 0px;
 
 }
+.leftcolumncitynext .cardcitynext {   
+padding: 0px;
+}
 .rightcolumncitynext {
   /* float: left; */
   padding-top: 0px;

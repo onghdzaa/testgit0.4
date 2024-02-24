@@ -134,7 +134,7 @@
   p{
     font-size: 22px;
     font-weight: bold;
-    color: #7d9098;
+    /* color: #7d9098; */
   }
   p b{
     color: #fff;

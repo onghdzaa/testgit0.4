@@ -1,16 +1,16 @@
 <template>
 <div class="grid-container">
-  <div class="item1">
+  <div class="itemcityimg1">
     <iframe width="99%" height="99%" 
 src="https://www.youtube.com/embed/QhUfEQUIC50?si=j07LfHi86uOz0Y75">
 </iframe> 
 </div>
-  <div class="item2">1</div>
-  <div class="item3">1</div>  
-  <div class="item4">1</div>
-  <div class="item5">1</div>
-  <div class="item6">1</div>
-  <div class="item7">1</div>
+  <div class="itemcityimg2">1</div>
+  <div class="itemcityimg3">1</div>  
+  <div class="itemcityimg4">1</div>
+  <div class="itemcityimg5">1</div>
+  <div class="itemcityimg6">1</div>
+  <div class="itemcityimg7">1</div>
 
   
 
@@ -36,7 +36,7 @@ src="https://www.youtube.com/embed/QhUfEQUIC50?si=j07LfHi86uOz0Y75">
 height: 100%;
 }
 
-.item1 {
+.itemcityimg1 {
 grid-column-start: 1;
 grid-column-end: 2;
 grid-row-start: 1;
@@ -62,7 +62,7 @@ height: 100%;
       padding: 5px;
   
     }
-    .item1 {
+    .itemcityimg1 {
 grid-column-start: 1;
 grid-column-end: 4;
 grid-row-start: 1;

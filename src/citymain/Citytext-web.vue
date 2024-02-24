@@ -1,11 +1,11 @@
 <template>
     <div class="grid-containerx">
-      <div class="item1">
+      <div class="item1citytext">
         <img class="sizeimgct" src="../assets/img/BG4.png">
     </div>
 
 
-      <div class="item2">
+      <div class="item2citytext">
             <h2>Wat Phra That Doi Suthep</h2>
 
 <ul>
@@ -62,18 +62,18 @@ Wat Phumin is a Buddhist temple located at the center of the city of Nan,
     /* height: 100%; */
     }
     
-    .item1 {
+    .item1citytext {
      width: 100%;
    
     }
-    .item2 {
+    .item2citytext {
       padding-left: 10%;
 text-align: left;
   width: 100%;
 
    
  }
- .item2 ul{
+ .item2citytext ul{
 
 padding-right: 25px;
 position: relative;
@@ -117,14 +117,14 @@ position: relative;
       padding: 10px;
   
     }
-    .item2 ul{
+    .item2citytext ul{
 
 padding-right: 0px;
 position: relative;
    display: flex;
    align-items: center;
 }
-.item2 {
+.item2citytext {
       padding-left: 0px;
 text-align: center;
   width: 100%;

@@ -21,7 +21,7 @@
               <p style="margin: 0px; font-size:1vw;">CHOOSE BY LOCATION</p>
             </div></div>
         </div>
-        <img src="../assets/img/Map2.gif" usemap="#image-map" class="iconmap" />
+        <img src="../assets/img/Map2.gif" usemap="#image-map" class="iconmapselectweb" />
 
         <map name="image-map">
           <area

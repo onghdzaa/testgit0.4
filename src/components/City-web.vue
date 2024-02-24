@@ -2,33 +2,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     
-    <div class="row">
+    <div class="rowcityw">
      
-        <div class="centercolumn">
-            <div class="card" > 
+        <div class="centercolumncityw">
+            <div class="cardcityw" > 
     <Menu></Menu>
         </div>
     </div>   
-    <div class="top">
-    <div class="leftandringt">
-  <div class="leftcolumn">
-    <div class="card">
+    <div class="topcityw">
+    <div class="leftandringtcityw">
+  <div class="leftcolumncityw">
+    <div class="cardcityw">
       <Location></Location>
     </div>
   </div>
-  <div class="rightcolumn">
-    <div class="card" >
+  <div class="rightcolumncityw">
+    <div class="cardcityw" >
     <Review/>
     </div>
   </div> </div>
-  <div class="leftandringt">
-  <div class="leftcolumn">
-    <div class="card">
+  <div class="leftandringtcityw">
+  <div class="leftcolumncityw">
+    <div class="cardcityw">
       <Location></Location>
     </div>
   </div>
-  <div class="rightcolumn">
-    <div class="card" >
+  <div class="rightcolumncityw">
+    <div class="cardcityw" >
     <Review/>
     </div>
   </div> </div></div>
@@ -55,9 +55,9 @@
     </div> -->
   <!-- </div> -->
 </div>
-<div class="navbar">
+<div class="navbarcityw">
     <navbar></navbar></div>
-    <div class="navbarfix"><Navtop></Navtop></div>
+    <div class="navbarfixcityw"><Navtop></Navtop></div>
 <!-- <Menu></Menu> -->
 
 </template>
@@ -86,7 +86,7 @@ import Navtop from '@/components/Nav-home.vue';
   box-sizing: border-box;
 }
 
-.navbarfix{
+.navbarfixcityw{
   opacity: 0.9;
   overflow: hidden;
   background-color: #333;
@@ -94,7 +94,7 @@ import Navtop from '@/components/Nav-home.vue';
   top: 0;
   width: 100%;
 }
-.navbar{
+.navbarcityw{
 top:10px}
 body {
   font-family: Arial;
@@ -104,17 +104,17 @@ body {
   background-attachment: fixed;
   background-size: 100% 100%;
 }
-.top{
+.topcityw{
   padding-top: 80px;
 }
-.leftandringt{
+.leftandringtcityw{
  
   padding-left:20%;
   float: left;
   /* background-color: aqua; */
   width: 100%;
 }
-.leftcolumn {   
+.leftcolumncityw {   
   float: left;
   width: 70%;
   padding-left: 20px;
@@ -122,7 +122,7 @@ body {
 }
 
 /* Right column */
-.centercolumn {
+.centercolumncityw {
   position: fixed;
   padding-top: 80px;
   float: left;
@@ -131,7 +131,7 @@ body {
   padding-left: 4%;
   height: auto;
 }
-.centercolumn .card{
+.centercolumncityw .cardcityw{
 
  
  
@@ -140,7 +140,7 @@ body {
   padding-left: 4%;
   height: auto;
 }
-.rightcolumn {
+.rightcolumncityw {
    /* position: ; */
   float: left;
   width: 25%;
@@ -156,7 +156,7 @@ body {
 }
 
 /* Add a card effect for articles */
-.card {
+.cardcityw {
   background-color: white;
   opacity: 0.7;
   padding: 20px;
@@ -165,7 +165,7 @@ body {
 }
 
 /* Clear floats after the columns */
-.row::after {
+.rowcityw::after {
   content: "";
   display: table;
  /* width: 100%; */
@@ -187,34 +187,34 @@ body {
   padding-left: 20px;
 
 } */
-.top{
+.topcityw{
   padding-top:0px ;
 }
-.centercolumn {
+.centercolumncityw {
   display: contents;
   width: 100%;
   padding-left: 0px;
   /* margin-top: 80px; */
   padding-top: 80px;
 }
-.centercolumn .card{
+.centercolumncityw .cardcityw{
 margin-top: 20px;
 }
 
-.card {
+.cardcityw {
   background-color: white;
   opacity: 0.7;
   /* padding: 20px; */
  /* margin-top: 90px; */
 height: auto;}
-.leftcolumn {   
+.leftcolumncityw {   
 padding-top: 0px;
 margin-top: 0px;
   width: 100%;
   padding-left: 0px;
 
 }
-.rightcolumn {
+.rightcolumncityw {
   /* float: left; */
   padding-top: 0px;
   padding-left: 0px;
@@ -227,7 +227,7 @@ margin-top: 0px;
     justify-content: center;
     /* justify-content: center; */
 }
-.leftandringt{
+.leftandringtcityw{
   float: left;
   padding-left: 0px;
   height: 100%;
@@ -235,10 +235,10 @@ margin-top: 0px;
   width: 100%;
   /* height: 20px; */
 }
-.navbarfix{
+.navbarfixcityw{
   display: none;
 }
-.navbar{
+.navbarcityw{
 display: none;}
 /* .card {
   background-color: white;
@@ -258,7 +258,7 @@ display: none;}
 } */
 @media only screen and (min-width: 2559px) {
   
-.card{
+.cardcityw{
   height: 600px;
 }
 

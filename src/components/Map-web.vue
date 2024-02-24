@@ -81,17 +81,17 @@
         <div class="con">
           <div class="item1zzzz">
             <router-link to="/city"> 
-            <img class="icon" src="../assets/img/s1.png" />
+            <img class="iconselectweb" src="../assets/img/s1.png" />
             </router-link>
           </div>
           <div class="item1zzzz">
-            <img class="icon" src="../assets/img/s2.png" />
+            <img class="iconselectweb" src="../assets/img/s2.png" />
           </div>
           <div class="item1zzzz">
-            <img class="icon" src="../assets/img/s3.png" />
+            <img class="iconselectweb" src="../assets/img/s3.png" />
           </div>
           <div class="item1zzzz">
-            <img class="icon" src="../assets/img/s4.png" />
+            <img class="iconselectweb" src="../assets/img/s4.png" />
           </div>
         </div>
       </div>
@@ -193,7 +193,7 @@ height: 100%;
   padding: 0;
   box-sizing: border-box;
 }
-.icon {
+.iconselectweb {
   border-style: solid;
   border-color: white;
   border-width: 10px;

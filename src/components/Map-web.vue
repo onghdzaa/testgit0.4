@@ -3,7 +3,7 @@
     <div class="grid-containerxxz">
       <div class="item1">
         <div class="navmapcss">
-          <div class="navmapcsss"><div class="imgmap" style="padding-left: 2%;padding-right: 1%;  display: flex;  width: 7%;"><img
+          <div class="navmapcsss"><div class="imgmapselectweb" style="padding-left: 2%;padding-right: 1%;  display: flex;  width: 7%;"><img
               src="../assets/icon/location.gif"
               style="width: 70%;"
             /></div>
@@ -181,7 +181,7 @@ height: 100%;
   /* float: left; */
   width: 50%;
 }
-.iconmap {
+.iconmapselectweb {
   width: 50%;
   padding-top: 2%;
   /* max-width: 400px; */

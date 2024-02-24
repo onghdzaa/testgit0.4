@@ -1,7 +1,7 @@
 <template>
-  <div class="map">
+  <div class="mapmenumap">
 
-    <img class="iconmap" src="../assets/icon/N1.png">
+    <img class="iconmapmenumap" src="../assets/icon/N1.png">
     <h2 style="text-align: center;">cut</h2>
     <p style="text-align: center;">ss</p>
     <div class="laout1me">
@@ -12,18 +12,18 @@
 
       </div>
     </div>
-    <div class="grid-container">
-      <div class="grid-item1">1
+    <div class="grid-containermenumap">
+      <div class="grid-item1menumap">1
         <input type="range" min="1" max="100" value="50">
       </div>
-      <div class="grid-item"><img class="sizeimg"  src="../assets/icon/S7-1.png"> 1</div>
-      <div class="grid-item"><img class="sizeimg" src="../assets/icon/S7-1.png">1</div>
-      <div class="grid-item"><img class="sizeimg" src="../assets/icon/S7-1.png">1</div>
-      <div class="grid-item"><img class="sizeimg" src="../assets/icon/S7-1.png">1</div>
-      <div class="grid-item"><img class="sizeimg" src="../assets/icon/S7-1.png">1</div>
-      <div class="grid-item"><img class="sizeimg" src="../assets/icon/S7-1.png">1</div>
-      <div class="grid-item"><img class="sizeimg" src="../assets/icon/S7-1.png">1</div>
-      <div class="grid-item"><img class="sizeimg" src="../assets/icon/S7-1.png">1</div>
+      <div class="grid-itemmenumap"><img class="sizeimgmenumap"  src="../assets/icon/S7-1.png"> 1</div>
+      <div class="grid-itemmenumap"><img class="sizeimgmenumap" src="../assets/icon/S7-1.png">1</div>
+      <div class="grid-itemmenumap"><img class="sizeimgmenumap" src="../assets/icon/S7-1.png">1</div>
+      <div class="grid-itemmenumap"><img class="sizeimgmenumap" src="../assets/icon/S7-1.png">1</div>
+      <div class="grid-itemmenumap"><img class="sizeimgmenumap" src="../assets/icon/S7-1.png">1</div>
+      <div class="grid-itemmenumap"><img class="sizeimgmenumap" src="../assets/icon/S7-1.png">1</div>
+      <div class="grid-itemmenumap"><img class="sizeimgmenumap" src="../assets/icon/S7-1.png">1</div>
+      <div class="grid-itemmenumap"><img class="sizeimgmenumap" src="../assets/icon/S7-1.png">1</div>
     </div>
     <button>xssssss</button>
   </div>
@@ -53,11 +53,11 @@ export default {
 }
 </script>
 <style>
-.grid-item1 {
+.grid-item1menumap {
   height: 50px;
 }
 
-.grid-container {
+.grid-containermenumap {
   display: grid;
   grid-template-columns: 3;
  
@@ -66,13 +66,13 @@ input[type="range"] {
   width:100%;
   max-width: 200px;
 }
-.sizeimg {
+.sizeimgmenumap {
   float: left;
   width: 15%;
   padding-right: 5%;
 }
 
-.grid-item {
+.grid-itemmenumap {
   background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(0, 0, 0, 0.8);
   padding: 2%;
@@ -103,7 +103,7 @@ input[type="range"] {
   height: 50px;
 }
 
-.iconmap {
+.iconmapmenumap {
   width: 100%;
   height: 200px;
   /* widows: 450px; */

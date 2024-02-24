@@ -12,7 +12,7 @@
     <div class="topcityw">
     <div class="leftandringtcityw">
   <div class="leftcolumncityw">
-    <div class="cardcityw">
+  <div class="cardcityw">
       <Location></Location>
     </div>
   </div>

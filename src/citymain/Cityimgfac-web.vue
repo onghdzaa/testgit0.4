@@ -47,21 +47,19 @@
         
     }
     
-    /* .item2 {
-      float: left;
-      width: 100%;
-      height: 99%;
-    
-      
+    @media only screen and (max-width: 600px) {
+      .grid-containers {
+      display: grid;
+      width: 99%;
+    grid-template-columns: auto auto   ; 
+      /* grid-template-rows: auto auto;  */
+      /* gap: 10px; */
+      /* background-color: #2196F3; */
+      padding: 10px;
+  
     }
-    
-    .item3 {
-      float: left;
-      width: 100%;
-      height: 99%;
-    
-      
-    } */
+
+}
   
     
     </style>

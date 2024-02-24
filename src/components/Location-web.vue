@@ -76,7 +76,11 @@ src="https://www.youtube.com/embed/QhUfEQUIC50?si=j07LfHi86uOz0Y75">
   also a popular destination for photographers, due to its beautiful and photogenic setting.
 </p>
 </div>
+<RouterLink to="citynext">
+  <div class="fixbuttomloacation">
+  <div class="lineloacation"></div>
 
+  <button class="buttomloacation">Read More >></button></div></RouterLink>
 </div>
 
 </div>
@@ -154,13 +158,16 @@ console.log(this.imgpop);
 * {
   box-sizing: border-box;
 }
+.text{
+  text-align: left;
+}
 /* .test{
   max-width:600px ;
   width: 100%;
   height: 550px;
   background-color: aqua;
 } */
-h2,p,ul{
+.text h2,text p,text ul{
   text-align: left;
 }
 p{
@@ -184,6 +191,20 @@ ul{
   width: 20%;
   font-size:  0.75vw;
   background-color: #777;
+}
+.lineloacation{
+  
+  width:80%;
+  height: 1px;
+  background-color: #777;
+}
+.fixbuttomloacation{
+  display: flex;
+    align-items: center;
+  /* justify-content: center; */
+  width: 100%;
+  /* height:20px; */
+ 
 }
 div.gallery {
     position: relative;
@@ -231,7 +252,17 @@ float: left;
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }
-
+.buttomloacation{
+  /* display: flex; */
+  width: 20%;
+  font-size: 0.7vw;
+ margin-left: 5%;
+  float: right;
+  text-align: center;
+  background-color: #777;
+  padding: 0.1%;
+  /* bottom: 0; */
+}
 .modal-content {
   margin: auto;
   display: block;
@@ -330,6 +361,7 @@ div.text h2 {
 }
 div.text p {
   font-size:2vw;
+  text-align: center;
 }
 .iconfix{
   font-size: 4vw;
@@ -340,7 +372,14 @@ div.text p {
 /* .text{
   font-size: 4vw;
 } */
+.buttomloacation{
+ 
+  font-size: 2vw;
 
+
+
+  /* bottom: 0; */
+}
 }
 
 </style>

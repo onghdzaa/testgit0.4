@@ -7,7 +7,7 @@
     </div>
     <div class="item2sz" style="border-bottom: 5px solid gray">
       <div class="grid-itemnav">
-        <img class="sizeimgnav" src="../assets/icon/S7-1.png" /> 1
+        <img class="sizeimgnav" src="../assets/icon/S7-1.png" />1
       </div>
       <div class="grid-itemnav">
         <img class="sizeimgnav" src="../assets/icon/S7-1.png" />1
@@ -32,17 +32,21 @@
       </div>
     </div>
     <div class="item3sz">
-      <div class="starandname" style="width: 100%; text-align: left; ">Diego F <StarRating :show-rating="false" :star-size="10" :rating="4" :read-only="true" style="float: right;" />
-      <div style="float: left; margin-left: 20px;">This-div-contains-the-long-h2-lorem-text-demonstrated-in the </div>
+      
+      <div class="starandname" style="width: 100%; text-align: left; "> <div class="startext"><div class="starandnametext">Diego F</div><StarRating :show-rating="false" :star-size="10" :rating="4" :read-only="true" /></div>
+      <div class="textcitynav" style="float: left; margin-left: 20px;">This-div-contains-the-long-h2-lorem-text-demonstrated-in the </div>
      <div class="leftstar" style="float: right;"></div> </div>
-        
+     <div class="starandname" style="width: 100%; text-align: left; "> <div class="startext"><div class="starandnametext">Diego F</div><StarRating :show-rating="false" :star-size="10" :rating="4" :read-only="true" /></div>
+      <div class="textcitynav" style="float: left; margin-left: 20px;">This-div-contains-the-long-h2-lorem-text-demonstrated-in the </div>
+     <div class="leftstar" style="float: right;"></div> </div>
 
-      <div class="grid-itemnav"><p></p></div>
+      <!-- <div class="grid-itemnav"></div> -->
     </div>
     <div class="item4sz" style="border-bottom: 5px solid gray"> 
-      <div class="starandname" style="width: 100%; text-align: left; ">Diego F <StarRating :show-rating="false" :star-size="10" :rating="4" :read-only="true" style="float: right;" />
+      <!-- <div class="starandname" style="width: 100%; text-align: left; ">Diego F <StarRating :show-rating="false" :star-size="10" :rating="4" :read-only="true" style="float: right;" />
       <div style="float: left; margin-left: 20px;">This-div-contains-the-long-h2-lorem-text-demonstrated-in the </div>
-     <div class="leftstar" style="float: right;"></div> </div>
+     <div class="leftstar" style="float: right;"></div> 
+    </div> -->
       <!-- <div class="wrap-it">
 This-div-contains-the-long-h2-lorem-text-demonstrated-in the
         </div> -->
@@ -62,9 +66,10 @@ export default {
 .wrap-it{
 word-wrap: break-word;
 }
+
 .item3sz {
-  max-width: 200px;
-  max-height: 200px;
+  /* max-width: 200px;
+  max-height: 200px; */
   word-wrap: break-word;
     width: auto;
   /* height: 50000000px; */
@@ -78,10 +83,25 @@ word-wrap: break-word;
   /* grid-template-columns: auto ; */
   /* object-fit: cover; */
 }
-/* .sizeimgnav{
-      max-width: 80px;
+.starandnametext{
+  white-space: nowrap;
+  font-size: 1vw;
+  padding-right: 65%;
+}
+.startext{
+  width: 100%;
+ 
+  /* justify-content: center; */
+    display: flex;
+    align-items: center;
+}
+.textcitynav{
+  font-size: 1vw;
+}
+.sizeimgnav{
+      width: 15%;
       min-width: auto;
-    } */
+    }
 .grid-containersz {
   display: grid;
   /* grid-template-columns: auto ; */
@@ -112,7 +132,39 @@ word-wrap: break-word;
   min-width: 10px;
   object-fit: cover;
 }
+@media only screen and (max-width: 1580px) {
+  .starandnametext{
+  /* font-size: 1vw; */
+  padding-right: 55%;
+}
+}
+@media only screen and (max-width: 1180px) {
+  .starandnametext{
+  /* font-size: 1vw; */
+  padding-right: 35%;
+}
+    }
+    @media only screen and (max-width: 1180px) {
+  .starandnametext{
+  /* font-size: 1vw; */
+  padding-right: 20%;
+}
 
+    }
+    @media only screen and (max-width: 600px) {
+  .starandnametext{
+  /* font-size: 1vw; */
+  padding-right: 80%;
+}
+.starandnametext{
+  white-space: nowrap;
+  font-size: 5vw;
+  padding-right: 65%;
+}
+.textcitynav{
+  font-size: 5vw;
+}
+    }
 /* .item2 {
       float: left;
       width: 100%;

@@ -121,11 +121,11 @@
     
     background-color: #2600ff;
   }
-  p{
+  /* p{
     font-size: 22px;
     font-weight: bold;
     color: #7d9098;
-  }
+  } */
   .option1{
     padding-bottom: 2%;
   }

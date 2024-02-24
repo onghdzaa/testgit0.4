@@ -5,7 +5,7 @@
     </div>
 
 
-      <div class="item2" style="text-align: left;">
+      <div class="item2">
             <h2>Wat Phra That Doi Suthep</h2>
 
 <ul>
@@ -57,7 +57,7 @@ Wat Phumin is a Buddhist temple located at the center of the city of Nan,
     
     .grid-containerx > div {
       background-color: rgba(255, 255, 255, 0.8);
-      text-align: center;
+      /* text-align: center; */
        height: 100%;
     /* height: 100%; */
     }
@@ -68,12 +68,12 @@ Wat Phumin is a Buddhist temple located at the center of the city of Nan,
     }
     .item2 {
       padding-left: 10%;
-      float: left;
+text-align: left;
   width: 100%;
 
    
  }
- ul{
+ .item2 ul{
 
 padding-right: 25px;
 position: relative;
@@ -99,27 +99,38 @@ position: relative;
   height: auto;
 }
     
-    /* .item2 {
-      float: left;
-      width: 100%;
-      height: 99%;
-    
-      
-    }
-    
-    .item3 {
-      float: left;
-      width: 100%;
-      height: 99%;
-    
-      
-    } */
+
     .sizeimgct{
       object-fit: cover;
       max-width: 99%;
     /* width: 99%; */
     height: 99%;
     }
-    
+    @media only screen and (max-width: 600px) {
+      .grid-containerx {
+      display: grid;
+      width: 99%;
+    grid-template-columns: 100%    ; 
+      /* grid-template-rows: auto auto;  */
+      /* gap: 10px; */
+      /* background-color: #2196F3; */
+      padding: 10px;
+  
+    }
+    .item2 ul{
+
+padding-right: 0px;
+position: relative;
+   display: flex;
+   align-items: center;
+}
+.item2 {
+      padding-left: 0px;
+text-align: center;
+  width: 100%;
+
+   
+ }
+}
     </style>
     

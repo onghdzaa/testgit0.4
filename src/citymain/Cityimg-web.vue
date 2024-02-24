@@ -46,25 +46,30 @@ height: 100%;
   
 }
 
-
-/* .item2 {
-  float: left;
-  width: 100%;
-  height: 99%;
-
-  
-}
-
-.item3 {
-  float: left;
-  width: 100%;
-  height: 99%;
-
-  
-} */
 .imgcity{
 width: 100%;
 height: 100%;
 }
 
+@media only screen and (max-width: 600px) {
+      .grid-container {
+      display: grid;
+      width: 99%;
+    grid-template-columns: auto auto   ; 
+      /* grid-template-rows: auto auto;  */
+      gap: 5px;
+      /* background-color: #2196F3; */
+      padding: 5px;
+  
+    }
+    .item1 {
+grid-column-start: 1;
+grid-column-end: 4;
+grid-row-start: 1;
+grid-row-end: 3;
+ width: 100%;
+height: 100%;
+  
+}
+    }
 </style>

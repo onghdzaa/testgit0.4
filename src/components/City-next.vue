@@ -2,20 +2,20 @@
     <Navtop></Navtop>
     <div class="row">
         
-        <div class="centercolumn">
-            <div class="card"> 
+        <div class="centercolumncitynext">
+            <div class="cardcitynext"> 
            
     <Menu></Menu>
         </div>
     </div>
-  <div class="leftcolumn">
-    <div class="card">
+  <div class="leftcolumncitynext">
+    <div class="cardcitynext">
       <Cityimg></Cityimg>
     </div>
-    <div class="card">
+    <div class="cardcitynext">
       <Citytext></Citytext>
     </div>
-    <div class="card">
+    <div class="cardcitynext">
         <h2>fac</h2>
         <Cityimgfac></Cityimgfac>
     </div>
@@ -62,7 +62,7 @@ body {
   background-attachment: fixed;
   background-size: 100% 100%;
 }
-.leftcolumn {   
+.leftcolumncitynext {   
   float: left;
   width: 70%;
   padding-left: 20px;
@@ -70,24 +70,22 @@ body {
 }
 
 /* Right column */
-.centercolumn {
+.centercolumncitynext {
   float: left;
   width: 24%;
   padding-left: 80px;
+  /* min-width: 300px; */
 }
 
 
 /* Fake image */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-}
+
 
 /* Add a card effect for articles */
-.card {
+.cardcitynext {
   background-color: white;
   padding: 20px;
+  opacity: 0.7;
   margin-top: 20px;
   height: 350%;
 }
@@ -100,13 +98,70 @@ body {
 }
 
 /* Footer */
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
-  margin-top: 20px;
+
+
+@media only screen and (max-width: 600px) {
+  /* .leftcolumn {   
+  float: left;
+  width: 50%;
+  padding-left: 20px;
+
+} */
+/* .topcityw{
+  padding-top:0px ;
+} */
+.centercolumncitynext {
+  display: contents;
+  width: 100%;
+  padding-left: 0px;
+  /* margin-top: 80px; */
+  padding-top: 80px;
+}
+/* .centercolumncityw .cardcityw{
+margin-top: 20px;
+} */
+
+.cardcitynext {
+  background-color: white;
+  
+  /* padding: 20px; */
+ /* margin-top: 90px; */
+height: auto;}
+.leftcolumncitynext {   
+padding-top: 0px;
+margin-top: 0px;
+  width: 100%;
+  padding-left: 0px;
+
+}
+.rightcolumncitynext {
+  /* float: left; */
+  padding-top: 0px;
+  padding-left: 0px;
+  width: 100%;
+  /* height: 200px; */
+  /* background-color: #f1f1f1; */
+  /* padding-left: 20px; */
+  /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    /* justify-content: center; */
 }
 
+.navbarfixcityw{
+  display: none;
+}
+.navbarcityw{
+display: none;}
+/* .card {
+  background-color: white;
+  opacity: 0.7;
+  padding: 20px;
+  margin-top: 20px;
+  height: 450px;
+} */
+
+}
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
 /* @media screen and (max-width: 800px) {
   .leftcolumn, .rightcolumn {   
@@ -114,4 +169,11 @@ body {
     padding: 0;
   }
 } */
+@media only screen and (min-width: 2559px) {
+  
+.cardcitynext{
+  height: 600px;
+}
+
+}
 </style>

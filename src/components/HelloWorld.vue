@@ -11,8 +11,8 @@
       <!-- <li><button v-on:click="redirect_to_login"><img v-bind:src="imgmain" > </button></li> -->
       <!-- <li><img id ="img1" @click="counters()" @mouseover="setNewimg(imgmain)" @mouseout="setOldimg(imgmain)" src="../assets/icon/LM.png"></li> -->
       <li><img v-bind:src="imgmain" style="width: 100%;" @click="counters()" @mouseover="setNewimg(imgmain)" @mouseout="setOldimg(imgmain)"></li> 
-      <li><img v-bind:src="imgmain" style="width: 100%;" @click="counters()" @mouseover="setNewimg(imgmain)" @mouseout="setOldimg(imgmain)"></li>
-      <li><img v-bind:src="imgmain" style="width: 100%;" @click="counters()" @mouseover="setNewimg(imgmain)"  @mouseout="setOldimg(imgmain)"></li>
+      <li><img v-bind:src="imgmain2" style="width: 100%;" @click="counters1()" @mouseover="setNewimg1(imgmain)" @mouseout="setOldimg1(imgmain)"></li>
+      <li><img v-bind:src="imgmain3" style="width: 100%;" @click="counters2()" @mouseover="setNewimg2(imgmain)"  @mouseout="setOldimg2(imgmain)"></li>
      <!-- //<button @click="counters()">Add 1</button> -->
     
 
@@ -33,13 +33,7 @@
                           <div class="hello12">
                             <!-- <img src="../assets/img/x-mark.png" style="width: 5%; float: right;" alt=""> -->
                             <div class="box">
-                        <div class="itm1" >
-                         <router-link to="/select">   <button 
-                          class="btn btn-info" 
-                          style="background-color: #17A2BB; width: 100%; height: 50px;   border-radius: 25px;
-                           color : #fff "><p style="margin: 0px; font-size:2vw;">Continue as a guest</p>
-                        </button> </router-link>
-                         </div>
+                      
                          <div class="itm1">
                               <router-link to="/login"><button @click="isOpen= false"
                           class="btn btn-info" 
@@ -47,7 +41,13 @@
                            color : #fff "><p style="margin: 0px; font-size:2vw;">Log In / Sign Up</p>
                          </button></router-link>
                         </div>
-                 
+                   <div class="itm1" >
+                         <router-link to="/select">   <button 
+                          class="btn btn-info" 
+                          style="background-color: #17A2BB; width: 100%; height: 50px;   border-radius: 25px;
+                           color : #fff "><p style="margin: 0px; font-size:2vw;">Continue as a guest</p>
+                        </button> </router-link>
+                         </div>
                      </div>
                       </div>
                         </div>
@@ -74,7 +74,12 @@ export default {
   data() {
     return {  
     imgmain: require("../assets/icon/LM.png"),
+    imgmain2: require("../assets/icon/zz.png"),
+    imgmain3: require("../assets/icon/HL.gif"),
     imgexit: require("../assets/icon/zz.png"),
+    countnum:0,
+    countnum1:0,
+    countnum2:0,
     isOpen: false,
     tst:"string",
     // select
@@ -105,31 +110,89 @@ export default {
       console.log(this.isOpen);
         },
         counters(){
+          if(this.countnum==0){
+             this.countnum=1;
       console.log("xxxx");
-       this.imgmain =  require("../assets/icon/zz.png")
+       this.imgmain =  require("../assets/icon/LM1.gif")
+          }else if(this.countnum==1){this.countnum=0;
+          this.imgmain =  require("../assets/icon/LM.png")}
+          
         },
+        
         setNewimg(img){
-          this.imgmain =  require("../assets/icon/HL1.png")
-         console.log(img);
-        //  if(isOpen==true){}
-        //  if(img!=require("../assets/icon/zz.png")){
-        //    //console.log(img);
-        // // console.log("Xxx");
-        //   this.imgmain =  require("../assets/icon/HL1.png")
-        //  }else{
-        //   console.log("zzzz");
-        //  }
-         
-        // img.src = require("../assets/icon/HL1.png") ;
-        }, setOldimg(img){
-          if(img!=require("../assets/icon/zz.png")){
+          if(this.countnum==0){
+  this.imgmain =  require("../assets/icon/LM2.gif")
+         console.log(img+"xxxx");
+          }else if(this.countnum==1){
+            console.log("xxx");
+          }
+        }, setOldimg(){
+          if(this.countnum==0){
             this.imgmain =  require("../assets/icon/LM.png")
-          }else{
+          }else 
+          if(this.countnum==1)
+          {
             
             console.log(this.imgmain);
           }
-         // console.log("XxxX");
-         // img.src = '../assets/icon/HL1.png';
+        },
+        
+        //1
+        counters1(){
+          if(this.countnum1==0){
+             this.countnum1=1;
+       this.imgmain2 =  require("../assets/icon/VL.png")
+          }else if(this.countnum1==1){this.countnum1=0;
+          this.imgmain2 =  require("../assets/icon/zz.png")}
+          
+        },
+        
+        setNewimg1(img){
+          if(this.countnum1==0){
+  this.imgmain2 =  require("../assets/icon/VL2.png")
+         console.log(img+"xxxx");
+          }else if(this.countnum1==1){
+            console.log("xxx");
+          }
+        }, setOldimg1(){
+          if(this.countnum1==0){
+            this.imgmain2 =  require("../assets/icon/zz.png")
+          }else 
+          if(this.countnum1==1)
+          {
+            
+            console.log(this.imgmain2)
+          }
+        },
+        
+        
+        //2
+        counters2(){
+          if(this.countnum2==0){
+             this.countnum2=1;
+      console.log("xxxx");
+       this.imgmain3 =  require("../assets/icon/HL1.png")
+          }else if(this.countnum2==1){this.countnum2=0;
+          this.imgmain3 =  require("../assets/icon/HL.gif")}
+          
+        },
+        
+        setNewimg2(img){
+          if(this.countnum2==0){
+  this.imgmain3 =  require("../assets/icon/HL3.png")
+         console.log(img+"xxxx");
+          }else if(this.countnum2==1){
+            console.log("xxx");
+          }
+        }, setOldimg2(){
+          if(this.countnum2==0){
+            this.imgmain3 =  require("../assets/icon/HL.gif")
+          }else 
+          if(this.countnum2==1)
+          {
+            
+            console.log(this.imgmain3);
+          }
         }
            
        

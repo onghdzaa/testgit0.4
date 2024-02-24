@@ -138,7 +138,7 @@
     text-transform: uppercase;
   }
   .login{
-    width: 50%;
+    max-width: 550px;
    height: 100%;
    border-radius: 25px;
   background-color: white;

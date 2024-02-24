@@ -55,7 +55,7 @@
 <script>
 </script>
 <style>
-*{
+/* *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -66,7 +66,7 @@ html,body{
   height: 100%;
   width: 100%;
   place-items: center;
-  /*background-color: #8EC5FC;*/
+  background-color: #8EC5FC;
   background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
 }
 ::selection{
@@ -180,7 +180,7 @@ input[type="radio"]{
 .form-inner form .field input:focus{
   border-color: #1a75ff;
   /* box-shadow: inset 0 0 3px #fb6aae; */
-}
+/* }
 .form-inner form .field input::placeholder{
   color: #999;
   transition: all 0.3s ease;
@@ -237,5 +237,5 @@ form .btn input[type="submit"]{
   font-size: 20px;
   font-weight: 500;
   cursor: pointer;
-}
+}  */
 </style>

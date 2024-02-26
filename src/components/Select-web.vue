@@ -45,6 +45,13 @@
   background-size: 100% 100%;  
   
 }
+html{
+  display: contents;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+
+}
 .backimage{
   display: flex;
   align-items: center;

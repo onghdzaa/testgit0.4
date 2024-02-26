@@ -1,6 +1,7 @@
 <template>
   
      <!-- <v-facebook-login app-id="1069212137469617"></v-facebook-login> -->
+     <div class="wrappertotal">
       <div class="wrapper">
       <h1 style="text-align: left; padding-left: 10%;">Log In</h1>
       <div class="slide-controls">
@@ -54,7 +55,7 @@
     </button> -->
       </div>
       </div>
-
+     </div>
   </template>
   <script setup>
  import { googleTokenLogin } from "vue3-google-login"
@@ -161,7 +162,8 @@ const loginz = () => {
   background-attachment: fixed;
   background-size: 100% 100%;
 }
-html{
+.wrappertotal{
+  position: fixed;
   display: grid;
   height: 100%;
   width: 100%;
@@ -304,7 +306,7 @@ input[type="radio"]{
   .wrapper{
     overflow: hidden;
     max-width: 500px;
-   height: 100%;
+  max-height: 500px;
    border-radius: 25px;
   background-color: white;
   padding: 32px;

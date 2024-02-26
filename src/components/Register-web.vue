@@ -1,5 +1,5 @@
 <template>
-    
+    <div class="loginzzss">
       <div class="loginzzs">
       <h1 style="text-align: left; padding-left: 10%;">Register</h1>
       <div class="slide-controls">
@@ -39,6 +39,7 @@
       </div>
       
     </div>
+  </div>
   </template>
   <script>
 
@@ -84,13 +85,8 @@
 
   </script>
   <style>
- html{
-  display: grid;
-  height: 100%;
-  width: 100%;
-  place-items: center;
 
-}
+
 
   
     body {
@@ -106,6 +102,13 @@
   }
   a:hover{
     text-decoration: none;
+  }
+  .loginzzss{
+    position: fixed;
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
   }
   .loginzzs .slide-controls{
   position: relative;
@@ -214,7 +217,7 @@ input[type="radio"]{
   .loginzzs{
     overflow: hidden;
     max-width: 500px;
-   height: 100%;
+  max-height: 700px;
    border-radius: 25px;
   background-color: white;
   padding: 32px;

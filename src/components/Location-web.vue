@@ -11,7 +11,7 @@ src="https://www.youtube.com/embed/QhUfEQUIC50?si=j07LfHi86uOz0Y75">
 
     <div class="gallery">
        
-  <img @click="myFunction('../assets/img/BG1.png')" id="myImg" src="../assets/img/BG1.png" width="100%" height="100">
+  <img @click="myFunction('../assets/img/1pm.jpg')" id="myImg" src="../assets/img/1pm.jpg" width="100%" height="100">
   
   <!-- <div id="myModal" class="modal">
   <span class="close">&times;</span>
@@ -22,23 +22,24 @@ src="https://www.youtube.com/embed/QhUfEQUIC50?si=j07LfHi86uOz0Y75">
 
 <div class="gallery">
   
-    <img onclick="" src="../assets/img/BG1.png" width="100%" height="100">
+    <img id="myImg" src="../assets/img/2pm.jpg" width="100%" height="100">
 </div>
+
 
 <div class="gallery">
   
-    <img src="../assets/img/BG1.png" width="100%" height="100">
+    <img src="../assets/img/3pm.jpg" width="100%" height="100">
   </div>
   <div class="gallery">
        
       
-         <img src="../assets/img/BG1.png" width="100%" height="100">
+         <img src="../assets/img/4pm.jpg" width="100%" height="100">
       
      </div>
      <div class="gallery">
        
        <div class="fixbg1">
-         <img src="../assets/img/BG1.png" width="100%" height="100" ></div>
+         <img src="../assets/img/5pm.jpg" width="100%" height="100" ></div>
          <div class="center">See all</div>
        
     
@@ -88,6 +89,28 @@ src="https://www.youtube.com/embed/QhUfEQUIC50?si=j07LfHi86uOz0Y75">
   </div>
 
 </template>
+<script setup>
+// Get the modal
+// var modal = document.getElementById("myModal");
+
+// // Get the image and insert it inside the modal - use its "alt" text as a caption
+// var img = document.getElementById("myImg");
+// var modalImg = document.getElementById("img01");
+// var captionText = document.getElementById("caption");
+// img.onclick = function(){
+//   modal.style.display = "block";
+//   modalImg.src = this.src;
+//   captionText.innerHTML = this.alt;
+// }
+
+// // Get the <span> element that closes the modal
+// var span = document.getElementsByClassName("close")[0];
+
+// // When the user clicks on <span> (x), close the modal
+// span.onclick = function() { 
+//   modal.style.display = "none";
+// }
+</script>
 <script>
 // document,q
 import StarRating from 'vue-star-rating'
@@ -174,7 +197,7 @@ p{
   font-size:0.8345vw;
 }
 ul{
-
+padding-left: 0%;
  padding-right: 25px;
  position: relative;
     display: flex;
@@ -282,6 +305,7 @@ div.gallery:hover {
 
 div.gallery img {
   /* height: auto; */
+  object-fit: cover;
 }
 .fixbg1{
     opacity:0.5

@@ -1,11 +1,11 @@
 <template>
     <div class="grid-containers">
       <div class="item1s">
-        <img src="..\assets\img\tree.jpg">
+        <img src="..\assets\img\F2.png">
     </div>
-      <div class="item2s"><img src="..\assets\img\tree.jpg"></div>
-      <div class="item3s"><img src="..\assets\img\tree.jpg"></div>  
-      <div class="item4s"><img src="..\assets\img\tree.jpg"></div>
+      <div class="item2s"><img src="..\assets\img\F3.png"></div>
+      <div class="item3s"><img src="..\assets\img\F5.png"></div>  
+      <div class="item4s"><img src="..\assets\img\F6.png"></div>
    
     
       
@@ -22,7 +22,7 @@
       grid-template-columns: auto auto auto auto ;
       grid-template-rows: 200px;
       gap: 20px;
-      background-color: #2196F3;
+      /* background-color: #2196F3; */
       padding: 10px;
      
     }

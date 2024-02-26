@@ -9,12 +9,12 @@
           <label  for="signup" class="slide signup">Sign Up</label>
           <div class="slider-tab"></div>
         </div>
-      <div class="container">
+      <div class="containerlogin">
         <!-- <ul><label for="uname"><b>Username</b></label></ul> -->
-       <input type="text" placeholder="Username" name="uname" required>
+       <input type="textx" placeholder="Username" name="uname" required>
 
         <!-- <ul><label for="psw"><b>Password</b></label></ul> -->
-        <input type="password" placeholder="E-mail" name="psw" required>
+        <input type="passwordx" placeholder="E-mail" name="psw" required>
        <input type="email" placeholder="Password" name="psw" required>
         <input type="confirmpassword" placeholder="Confirm Password" name="psw" required>
        
@@ -262,7 +262,7 @@ input[type="radio"]{
     /* border-radius: 4px; */
 margin: 0px 10px 10px 0px;}
 
-    input[type=text],input[type=password],input[type=confirmpassword],input[type=email] {
+    input[type=textx],input[type=passwordx],input[type=confirmpassword],input[type=email] {
       border-radius: 25px;
       margin-top: 10px;
       height: 2rem;
@@ -305,7 +305,7 @@ ul {
   list-style-type: none;
   padding: 10px;
 }
-.container {
+.containerlogin {
   padding: 20px;
 }
 .table{

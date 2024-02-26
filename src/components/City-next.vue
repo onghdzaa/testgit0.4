@@ -8,15 +8,17 @@
     <Menu></Menu>
         </div>
     </div>
-  <div class="leftcolumncitynext">
+  <div class="leftcolumncitynext"> <div class="ardcitynextfix1">
     <div class="cardcitynext">
       <Cityimg></Cityimg>
-    </div>
+    </div></div>
+    <div class="ardcitynextfix">
     <div class="cardcitynext">
       <Citytext></Citytext>
     </div>
+  </div>
     <div class="cardcitynext">
-        <h2>fac</h2>
+        <h2>Facilities</h2>
         <Cityimgfac></Cityimgfac>
     </div>
   </div>
@@ -76,8 +78,14 @@ body {
   padding-left: 80px;
   /* min-width: 300px; */
 }
-
-
+.cardcitynext h2{
+  padding-left: 3%;
+  text-align: left;
+}
+.centercolumncitynext h2{
+  padding: 0%;
+  text-align: center;
+}
 /* Fake image */
 
 
@@ -110,6 +118,10 @@ body {
 /* .topcityw{
   padding-top:0px ;
 } */
+.ardcitynextfix1{
+  height: 100%;
+  background-color: black;
+}
 .centercolumncitynext {
   display: contents;
   width: 100%;
@@ -123,10 +135,16 @@ margin-top: 20px;
 
 .cardcitynext {
   background-color: white;
+  /* max-height: 900px; */
+  height: auto;
   
-  /* padding: 20px; */
- /* margin-top: 90px; */
-height: auto;}
+}
+/* .ardcitynextfix .cardcitynext {
+  background-color: white;
+height: 900px;
+  height: auto;
+  
+} */
 .leftcolumncitynext {   
 padding-top: 0px;
 margin-top: 0px;
@@ -134,8 +152,15 @@ margin-top: 0px;
   padding-left: 0px;
 
 }
-.leftcolumncitynext .cardcitynext {   
-padding: 0px;
+.ardcitynextfix {   
+ /* display: flex; */
+  width: 100%;
+height:100%;
+max-height: 800px;
+}
+.ardcitynextfix> .cardcitynext {   
+   /* background-color: aqua; */
+height: 100%;
 }
 .rightcolumncitynext {
   /* float: left; */
@@ -172,6 +197,16 @@ display: none;}
     padding: 0;
   }
 } */
+@media only screen and (max-width: 900px) {
+  
+  .centercolumncitynext {
+  float: left;
+  width: 24%;
+  padding-left: 20px;
+  /* min-width: 300px; */
+}
+
+}
 @media only screen and (min-width: 2559px) {
   
 .cardcitynext{

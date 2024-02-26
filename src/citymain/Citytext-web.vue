@@ -1,7 +1,7 @@
 <template>
     <div class="grid-containerx">
       <div class="item1citytext">
-        <img class="sizeimgct" src="../assets/img/BG4.png">
+        <img class="sizeimgct" src="../assets/img/1pm.jpg">
     </div>
 
 
@@ -13,10 +13,11 @@
   <img class="iconlocationx" src="../assets/img/google.png"> <div class="fixtextx" style="padding-left: 10%;"></div>  Home  </div> 
 
   <div class="starleftx">
-  <StarRating :show-rating="false" :star-size="20" :rating="4" :read-only="true"/>
+  <StarRating :show-rating="false" :star-size="15" :rating="4" :read-only="true"/>
 
-</div>  <div class="re" style="float: right;">review</div>
+</div>  <div class="recitynext" style="float: right;">review</div>
 </ul>
+<p>
 Wat Phumin is a Buddhist temple located at the center of the city of Nan, 
   in the northern region of Thailand. The temple was built in 1596 and had 
   been through several restorations. The temple is an example of the 
@@ -27,7 +28,7 @@ Wat Phumin is a Buddhist temple located at the center of the city of Nan,
   which means Burmese man and woman. It is an example of mural with Tai Lue art in Nan, 
   which is considered as unique and different from paintings of other areas in the Northern 
   region of Thailand. In addition to its cultural and historical significance, Wat Phumin is 
-  also a popular destination for photographers, due to its beautiful and photogenic setting.</div>
+  also a popular destination for photographers, due to its beautiful and photogenic setting.</p></div>
     
     
       
@@ -46,21 +47,16 @@ Wat Phumin is a Buddhist temple located at the center of the city of Nan,
     <style>
     .grid-containerx {
       display: grid;
-      width: 99%;
-    grid-template-columns: 50% auto   ; 
-      /* grid-template-rows: auto auto;  */
+      /* width: 99%; */
+    grid-template-columns: 50% 50%   ; 
+      grid-template-rows: 100% ; 
+      max-height: 350px;
       /* gap: 10px; */
       /* background-color: #2196F3; */
       padding: 10px;
-  
+  /* object-fit: cover; */
     }
     
-    .grid-containerx > div {
-      background-color: rgba(255, 255, 255, 0.8);
-      /* text-align: center; */
-       height: 100%;
-    /* height: 100%; */
-    }
     
     .item1citytext {
      width: 100%;
@@ -70,12 +66,21 @@ Wat Phumin is a Buddhist temple located at the center of the city of Nan,
       padding-left: 10%;
 text-align: left;
   width: 100%;
-
+  height: auto;
    
  }
+ .recitynext{
+  width: 15%;
+text-align: center;
+  background-color: #777;
+  font-size: 1vw;
+  border-radius: 25px;
+  /* background-color: ; */
+ }
  .item2citytext ul{
-
-padding-right: 25px;
+margin: 0px;
+/* padding: 0px; */
+padding-left: 0px;
 position: relative;
    display: flex;
    align-items: center;
@@ -86,7 +91,8 @@ position: relative;
   float: right;
 }
  .iconfixx{
-  padding-left: 10%;
+  font-size: 1vw;
+  padding-left: 2%;
   float: left;
   position: relative;
  justify-content: center;
@@ -98,25 +104,46 @@ position: relative;
   width: 20%;
   height: auto;
 }
-    
+.item2citytext h2 {
+  padding-bottom: 10px ;
+font-size: 1.5vw;
+}
+.item2citytext p {
+  padding-top: 10px ;
+
+font-size: 0.8vw;
+}
 
     .sizeimgct{
-      object-fit: cover;
-      max-width: 99%;
-    /* width: 99%; */
+      /* object-fit: cover; */
+      /* max-width: 99%; */
+    width: 99%;
     height: 99%;
     }
     @media only screen and (max-width: 600px) {
       .grid-containerx {
       display: grid;
       width: 99%;
-    grid-template-columns: 100%    ; 
+      height: 100%;
+      max-height: 850px;
+    grid-template-columns: 100% ; 
+    grid-template-rows: auto auto; 
       /* grid-template-rows: auto auto;  */
+      
       /* gap: 10px; */
       /* background-color: #2196F3; */
       padding: 10px;
   
     }
+    .iconfixx{
+font-size: 2.5vw;
+}
+.recitynext{
+
+  font-size: 2.5vw;
+
+  /* background-color: ; */
+ }
     .item2citytext ul{
 
 padding-right: 0px;
@@ -128,9 +155,16 @@ position: relative;
       padding-left: 0px;
 text-align: center;
   width: 100%;
-
+height: 100%;
+max-height: 900px;
    
  }
+ .item2citytext h2 {
+font-size: 5vw;
+}
+.item2citytext p {
+font-size: 2.5vw;
+}
 }
     </style>
     

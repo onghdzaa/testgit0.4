@@ -2,33 +2,27 @@
   <div class="grid-containersz">
     <div class="item1sz" style="border-bottom: 5px solid gray">
       <img src="../assets/icon/N1.png" />
-      <h2 style="margin: 0px">ss</h2>
-      <p style="margin: 0px; margin-bottom: 2%">ss</p>
+      <h2 style="margin: 0px">CITY & CULTURE</h2>
+      <p style="margin: 0px; margin-bottom: 2%">NORTHEASTERN REGION</p>
     </div>
     <div class="item2sz" style="border-bottom: 5px solid gray">
       <div class="grid-itemnav">
-        <img class="sizeimgnav" src="../assets/icon/S7-1.png" />1
+        <img class="sizeimgnav" src="../assets/icon/S7-1.png" />Parking for prople with disabilities
       </div>
       <div class="grid-itemnav">
-        <img class="sizeimgnav" src="../assets/icon/S7-1.png" />1
+        <img class="sizeimgnav" src="../assets/icon/S7-1.png" />Step - free access to the building / property / site (possbly via elevator / ramps)
       </div>
       <div class="grid-itemnav">
-        <img class="sizeimgnav" src="../assets/icon/S7-1.png" />1
+        <img class="sizeimgnav" src="../assets/icon/S7-1.png" />All other rooms and facilities that van be used by the guest can be reached without steps or with a lift / ramp.
       </div>
       <div class="grid-itemnav">
-        <img class="sizeimgnav" src="../assets/icon/S7-1.png" />1
+        <img class="sizeimgnav" src="../assets/icon/S7-1.png" />Accessible Toilet by Wheelchair
       </div>
       <div class="grid-itemnav">
-        <img class="sizeimgnav" src="../assets/icon/S7-1.png" />1
+        <img class="sizeimgnav" src="../assets/icon/S7-1.png" />Requested Assistance is possible (request in advance)
       </div>
       <div class="grid-itemnav">
-        <img class="sizeimgnav" src="../assets/icon/S7-1.png" />1
-      </div>
-      <div class="grid-itemnav">
-        <img class="sizeimgnav" src="../assets/icon/S7-1.png" />1
-      </div>
-      <div class="grid-itemnav">
-        <img class="sizeimgnav" src="../assets/icon/S7-1.png" />1
+        <img class="sizeimgnav" src="../assets/icon/S7-1.png" />Request assistance is possible
       </div>
     </div>
     <div class="item3sz">
@@ -66,7 +60,7 @@ export default {
 .wrap-it{
 word-wrap: break-word;
 }
-
+.GR
 .item3sz {
   /* max-width: 200px;
   max-height: 200px; */
@@ -95,10 +89,23 @@ word-wrap: break-word;
     display: flex;
     align-items: center;
 }
+.grid-itemnav{
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 2%;
+  width: 100%;
+  min-width: 20px;
+  font-size: 0.6vw;
+  text-align: left;
+  text-align: left;
+  display: flex;
+    align-items: center;
+}
 .textcitynav{
   font-size: 1vw;
 }
 .sizeimgnav{
+  padding-right: 2%;
       width: 15%;
       min-width: auto;
     }
@@ -123,6 +130,12 @@ word-wrap: break-word;
 
 .item1sz {
   max-width: 100%;
+  height: 100%;
+}
+.item2sz {
+  display: grid;
+  grid-template-rows: 15% 15% 15% 15% 15% 15%;
+  max-height: 500px;
   height: 100%;
 }
 

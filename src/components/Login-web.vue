@@ -21,10 +21,10 @@
       </div> <p>CHOOSE {{ active }}</p> -->
       <div class="container">
         <!-- <ul><label for="uname"><b>Username</b></label></ul> -->
-        <input type="text" placeholder="Enter Username" name="uname" required>
+        <input type="text" id="logintext" placeholder="Enter Username" name="uname" required>
 
         <!-- <ul><label for="psw"><b>Password</b></label></ul> -->
-         <input type="password" placeholder="Enter Password" name="psw" required>
+         <input type="password" id="loginpass" placeholder="Enter Password" name="psw" required>
         <div class="container">
           <div class="remem" style="float: left; padding-left: 10%; padding-top: 4%;">
           <input type="checkbox" checked="checked" name="remember"> Remember me
@@ -287,6 +287,7 @@ input[type="radio"]{
   cursor: default;
   user-select: none;
 }
+/* #remeber */
   /* p{
     font-size: 22px;
     font-weight: bold;
@@ -368,7 +369,7 @@ background-image:url(../assets/img/BG1.png) ; */
   gap: 5%;
   /* padding-bottom: 10%; */
 }
-    input[type=text],input[type=password] {
+  .container  input[type=text], .container input[type=password] {
       border-radius: 25px;
       margin-top: 10px;
       height: 2rem;

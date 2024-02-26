@@ -296,7 +296,7 @@ h3 {
   font-size: 5ch;
   margin: 40px 0 0;
 color: white;}
-ul {
+.hello1 ul {
   list-style-type: none;
   padding: 0;
 }

@@ -4,7 +4,7 @@
         <div class="title login">Login Form</div>
         <div class="title signup">Signup Form</div>
       </div>
-      <!-- <div class="form-container"> -->
+      <div class="form-container">
         <div class="slide-controls">
           <input type="radio" name="slide" id="login" checked>
           <input type="radio" name="slide" id="signup">
@@ -12,7 +12,7 @@
           <label for="signup" class="slide signup">Signup</label>
           <div class="slider-tab"></div>
         </div>
-        <!-- <div class="form-inner">
+        <div class="form-inner">
           <form action="#" class="login">
             <pre>
             </pre>
@@ -48,20 +48,37 @@
             </div>
             <div class="signup-link">Already have an account? <a href="">Login</a></div>
           </form>
-        </div> -->
-      <!-- </div> -->
+        </div> 
+  </div>
     </div>
 </template>
 <script>
+// const loginText = document.querySelector(".title-text .login");
+//       const loginForm = document.querySelector("form.login");
+//       const loginBtn = document.querySelector("label.login");
+//       const signupBtn = document.querySelector("label.signup");
+//       const signupLink = document.querySelector("form .signup-link a");
+//       signupBtn.onclick = (()=>{
+//         loginForm.style.marginLeft = "-50%";
+//         loginText.style.marginLeft = "-50%";
+//       });
+//       loginBtn.onclick = (()=>{
+//         loginForm.style.marginLeft = "0%";
+//         loginText.style.marginLeft = "0%";
+//       });
+//       signupLink.onclick = (()=>{
+//         signupBtn.click();
+//         return false;
+//       });
 </script>
 <style>
-/* *{
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-html,body{
+html{
   display: grid;
   height: 100%;
   width: 100%;
@@ -75,7 +92,7 @@ html,body{
 }
 .wrapper{
   overflow: hidden;
-  max-width: 390px;
+  max-width: 590px;
   background: #fff;
   padding: 30px;
   border-radius: 15px;
@@ -91,7 +108,7 @@ html,body{
   font-weight: 600;
   text-align: center;
   transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
-}
+} 
 .wrapper .slide-controls{
   position: relative;
   display: flex;
@@ -149,15 +166,15 @@ input[type="radio"]{
   cursor: default;
   user-select: none;
 }
-.wrapper .form-container{
+ .wrapper .form-container{
   width: 100%;
   overflow: hidden;
 }
 .form-container .form-inner{
   display: flex;
   width: 200%;
-}
-.form-container .form-inner form{
+} 
+ .form-container .form-inner form{
   width: 50%;
   transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
 }
@@ -178,9 +195,9 @@ input[type="radio"]{
   transition: all 0.3s ease;
 }
 .form-inner form .field input:focus{
-  border-color: #1a75ff;
-  /* box-shadow: inset 0 0 3px #fb6aae; */
-/* }
+  border-color: #1a75ff; 
+  box-shadow: inset 0 0 3px #fb6aae; 
+ }
 .form-inner form .field input::placeholder{
   color: #999;
   transition: all 0.3s ease;
@@ -237,5 +254,5 @@ form .btn input[type="submit"]{
   font-size: 20px;
   font-weight: 500;
   cursor: pointer;
-}  */
+ } 
 </style>

@@ -14,6 +14,8 @@
 
   "dependencies": {
 
+    "@healerlab/vue3-facebook-login": "^0.1.6",
+
     "bootstrap": "^5.3.2",
 
     "core-js": "^3.8.3",
@@ -22,9 +24,15 @@
 
     "vue": "^3.2.13",
 
+    "vue-facebook-login-component-next": "^1.0.4",
+
     "vue-router": "^4.0.3",
 
-    "vue-star-rating": "^2.1.0"
+    "vue-star-rating": "^2.1.0",
+
+    "vue3-facebook-login": "^1.0.2",
+
+    "vue3-google-login": "^2.0.25"
 
   },
 

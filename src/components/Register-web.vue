@@ -1,40 +1,43 @@
 <template>
-    <div class="backimage">
-      <div class="login">
-      <h1 style="text-align: left; padding-left: 30%;">Register</h1>
-      <div id="main">
-        <nav v-bind:class="active" v-on:click.prevent>
-            <router-link to="/login"> <a href="#" class="logins" v-on:click="makeActive('logins')">Login</a> </router-link>
-          <a href="#" class="register" v-on:click="makeActive('register')">Register</a>
-        </nav>
-      </div>
+    
+      <div class="loginzzs">
+      <h1 style="text-align: left; padding-left: 10%;">Register</h1>
+      <div class="slide-controls">
+          <input type="radio" name="slide" id="login" >
+          <input type="radio" name="slide" id="signup" checked>
+         <label v-on:click="nexttap()" for="login" class="slide login">Login</label>
+          <label  for="signup" class="slide signup">Sign Up</label>
+          <div class="slider-tab"></div>
+        </div>
       <div class="container">
         <!-- <ul><label for="uname"><b>Username</b></label></ul> -->
-        <ul><input type="text" placeholder="Username" name="uname" required></ul>
+       <input type="text" placeholder="Username" name="uname" required>
 
         <!-- <ul><label for="psw"><b>Password</b></label></ul> -->
-        <ul> <input type="password" placeholder="E-mail" name="psw" required></ul>
-        <ul> <input type="email" placeholder="Password" name="psw" required></ul>
-        <ul> <input type="confirmpassword" placeholder="Confirm Password" name="psw" required></ul>
+        <input type="password" placeholder="E-mail" name="psw" required>
+       <input type="email" placeholder="Password" name="psw" required>
+        <input type="confirmpassword" placeholder="Confirm Password" name="psw" required>
        
       <div class="table">
         
             Requirements
       </div>
     
-    <ul><button class="btn" style="border-radius: 25px;">Login</button></ul>
+    
    
   </div>
-      <div class="option">
-        <ul><button @click="countersx()" class="btn1" ><img class="icon"  src="../assets/icon/S11-2.gif"><img class="icon" style=" margin-left: 5%;" src="../assets/icon/S11-2.gif"> Home<img class="icon1" src="../assets/icon/next.png"></button> </ul>
+      <div class="optionregister">
+        <button @click="countersx()" class="btn1register" ><img class="iconregister"  src="../assets/icon/S11-2.gif"><img class="iconregister" style=" margin-left: 6%;" src="../assets/icon/S12-2.gif"> Home<img class="icon1register" src="../assets/icon/next.png"></button> 
         <PopUP @close="isOpen= false" v-if="isOpen"><h2>pppp</h2></PopUP>
-        <ul><button @click="countersx()" class="btn1" ><img class="icon" src="../assets/img/facebook.png"><img class="icon" style=" margin-left: 5%;" src="../assets/icon/S11-2.gif"> Menu<img class="icon1" src="../assets/icon/next.png"></button></ul>
+        <button @click="countersx()" class="btn1register" ><img class="iconregister" src="../assets/icon/S15-3.png"><img class="iconregister" style=" margin-left: 6%;" src="../assets/icon/S13-2.gif"> Menu<img class="icon1register" src="../assets/icon/next.png"></button>
         <PopUP @close="isOpen= false" v-if="isOpen"><h2>pppp</h2></PopUP>
-        <ul><button class="btn1" ><img class="icon" src="../assets/img/twitter.png"><img class="icon" style=" margin-left: 5%;" src="../assets/icon/S11-2.gif"> Trash<img class="icon1" src="../assets/icon/next.png"></button></ul>
-        <!-- <PopUP :label="label"><h2>pppp</h2></PopUP> -->
+        <button @click="countersx()" class="btn1register" ><img class="iconregister" src="../assets/icon/S14-2.gif"><img class="iconregister" style=" margin-left: 6%;" src="../assets/icon/S11-2.gif"> Trash<img class="icon1register" src="../assets/icon/next.png"></button>
+        <!-- <PopUP :label="label"><h2>pppp</h2></PopUP> --><PopUP @close="isOpen= false" v-if="isOpen"><h2>pppp</h2></PopUP>
         <!-- <ul> <router-link to="/login"></router-link></ul> -->
+        
+        <button class="btnregister" style="border-radius: 25px;">Sign Up</button>
       </div>
-      </div>
+      
     </div>
   </template>
   <script>
@@ -68,21 +71,27 @@
         },
         makeActive(item) {
             this.active = item;
+        },
+        nexttap() {
+          console.log("ssssssssss");
+           
+           this.$router.push("/login");
         }
+      
     },
     
 }
 
   </script>
   <style>
-  /* .btn_group{
-    
-  } */
-  *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+ html{
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+
+}
+
   
     body {
   background-image: url("../assets/img/BG1.png");
@@ -98,6 +107,64 @@
   a:hover{
     text-decoration: none;
   }
+  .loginzzs .slide-controls{
+  position: relative;
+  display: flex;
+  height: 50px;
+  width: 100%;
+  overflow: hidden;
+  margin: 30px 0 10px 0;
+  justify-content: space-between;
+  border: 1px solid lightgrey;
+  border-radius: 15px;
+}
+.slide-controls .slide{
+  height: 100%;
+  width: 100%;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 48px;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.6s ease;
+}
+.slide-controls label.signup{
+  color: #000;
+}
+.slide-controls .slider-tab{
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  left: 0;
+  z-index: 0;
+  border-radius: 15px;
+ background-color: #302c74;
+  transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+input[type="radio"]{
+  display: none;
+}
+#signup:checked ~ .slider-tab{
+  left: 50%;
+}
+#signup:checked ~ label.signup{
+  color: #fff;
+  cursor: default;
+  user-select: none;
+}
+#signup:checked ~ label.login{
+  color: #000;
+}
+#login:checked ~ label.signup{
+  color: #000;
+}
+#login:checked ~ label.login{
+  cursor: default;
+  user-select: none;
+}
+
   nav{
     width: 430px;
             
@@ -144,24 +211,19 @@
     border-radius: 2px;
     text-transform: uppercase;
   }
-  .login{
-    width: 50%;
-    height: auto;
+  .loginzzs{
+    overflow: hidden;
+    max-width: 500px;
+   height: 100%;
    border-radius: 25px;
   background-color: white;
   padding: 32px;
   display: inline-block;
+  
   margin: 0 10px;
   }
-.backimage{
-  /* background-size: contain;
-  background-repeat: no-repeat;
-  width: 200px; */
-
-
-  }
   /* Style buttons */
-.btn {
+.btnregister {
   margin: auto;
   top: 5%;
   position: relative;
@@ -171,13 +233,16 @@
     align-items: center;
     justify-content: center;
     
-    font-size: 1.1rem;
+    /* font-size: 1.1rem; */
     /* padding: 1.8rem 15rem; */
-    font-weight: 600;
+    /* font-weight: 600; */
     user-select: none;
     border-radius: 4px;
+    margin-top: 20px;
+    color: white;
+     background-color: #302c74;
 }
-.btn1 {
+.btn1register {
   margin: auto;
   top: 5%;
   position: relative;
@@ -187,22 +252,21 @@
     align-items: center;
     justify-content: center;
     user-select: none;
-    font-size: 1.1rem;
+    /* font-size: 1.1rem; */
     /* padding: 1.8rem 15rem; */
     font-weight: 600;
     /* user-select: none; */
     /* border-radius: 4px; */
-}
+margin: 0px 10px 10px 0px;}
 
     input[type=text],input[type=password],input[type=confirmpassword],input[type=email] {
       border-radius: 25px;
-      margin: auto;
-      height: 3rem;
-      width: 50%;
-      font-size: 1.8rem;
+      margin-top: 10px;
+      height: 2rem;
+      width: 94%;
+      font-size: 1rem;
       border: 4px solid #000;
-      padding: 14px;
-
+      padding-left: 14px;
       font-weight: 600;
     }
     li {
@@ -210,27 +274,29 @@
   margin: 0px 30px 0 250px;
 }
 /* Darker background on mouse-over */
-.btn:hover,.btn1:hover {
-  background-color: RoyalBlue;
+.btnregister:hover,.btn1register:hover {
+  background-color: #302c74;
 }
-.icon{
+.iconregister{
   position: absolute;
-      width: 3%;
+      width: 4%;
       /* height: 100%; */
       left: 0;
       /* background-color: $color__white; */
       border-radius: 3px;
       margin-left: 1%;
+      
 }
-.icon1{
+.icon1register{
   position: absolute;
-      width: 3rem;
-      height: 3rem;
+      width: 7%;
+      height: 99%;
       right: 0; 
       /* background-color: $color__white; */
       border-radius: 3px;
       /* margin-left: 10px;  */
             /* float: right;  */
+           
 }
 ul {
   list-style-type: none;
@@ -247,7 +313,7 @@ ul {
   height: 50px;
   display: flex;
     align-items: center;
-    padding: 14px;
+margin: 20px 0px 20px 0px;    /* padding: 14px; */
     /* justify-content: center; */
   
 }

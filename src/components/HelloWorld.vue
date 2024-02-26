@@ -23,7 +23,7 @@
         <div class="root">
       <button @click="countersx()"
                         class="btn btn-info" 
-                        style="background-color: #525495; width: 30%; height: 50px;  border-radius: 8px ; border-color: #fff;
+                        style="background-color: #302c74; width: 30%; height: 50px;  border-radius: 8px ; border-color: #fff;
                         color : #fff  "> <p style="margin: 0px; font-size:1vw;">CONFIRM</p>
                         </button>
                        
@@ -259,14 +259,7 @@ justify-content: center;
 // width: 50%;
 //  height: auto;
 // }
-button{
-  padding: 0;
-// border: none;
- // outline: none;
-  border-radius: 5px;
-  overflow: hidden;
-  background-color: #2f3e5c;
-}
+
 .hello1{
   max-width: 50%;
    height: 60%;

@@ -1,9 +1,15 @@
 <template>
     <div class="container">
     <div class="topnavhome">
-        <div class="iconleft">
-      <a href="#home"> <img class="icon1" src="../assets/img/google.png"><div class="ul2"> Home </div></a>
-      <a href="#contact"> <img class="icon1" src="../assets/img/google.png"><div class="ul2"> Contact</div></a></div>
+        <div class="iconleft">    
+          <a href="#contact" style="padding: 5px;"> <div class="profileImagez"><div id="profileImage">{{ initials }}</div>{{firstName}} {{ lastName }}</div> </a> 
+      <a href="#contact"> <img class="icon1" src="../assets/icon/lg1.png"><div class="ul2"> LANGUAGE</div></a> 
+      <a href="#contact"> <img class="icon1" src="../assets/icon/sound1.png"><div class="ul2"> AUDIO</div></a>
+      <a href="#contact"> <img class="icon1" src="../assets/icon/size1.png"><div class="ul2"> FONT SIZE</div></a>
+      <a href="#home"> <img class="icon1" src="../assets/icon/home1.png"><div class="ul2"> HOME </div></a>
+     
+    </div> 
+
       <!-- <a href="#"><i class="../assets/img/twitter.png"></i> Search</a>  -->
       <!-- <img class="iconapp" src="../assets/img/google.png"> -->
     
@@ -13,20 +19,33 @@
 
 </template>
 
+
 <script>
 
-
+// $(document).ready(function(){
+//   var firstName = $('#firstName').text();
+//   var lastName = $('#lastName').text();
+//   var intials = firstName.charAt(0) + lastName.charAt(0);
+//   var profileImage = $('#profileImage').text(intials);
+// });
 
 export default {
   data() {
     return {  
+      firstName: 'John',
+      lastName: 'Doe',
        isOpen:true,
     };
-  }
-    ,
+  },
+  computed:{
+    initials() {
+      return this.firstName.charAt(0).toUpperCase() + this.lastName.charAt(0).toUpperCase();
+    }
+  },
   methods: {
 
     }
+    
 }
 
 </script>
@@ -34,6 +53,9 @@ export default {
 
 <style >
 body {margin:0;}
+.iconleft .ul2{
+  font-size: 10px;
+}
 .topnavhome {
     width: 100%;
   background-color: #333;
@@ -54,6 +76,14 @@ body {margin:0;}
     /* align-items: center;
     justify-content: center; */
 }
+.profileImagez{
+  /* width: 200px;
+  height: 20px; */
+  display: flex;
+  align-items: center;
+  text-align: left;
+  justify-content: space-between;
+}
 .iconleft{
   float: right;
   /* position: absolute; */
@@ -63,7 +93,7 @@ body {margin:0;}
 }
 .icon1{
      /* margin-left: 10rem; */
-    height: 1em;
+    height: 1.2em;
       /* top: 190px; */
 }
 .topnavhome a:hover ,.topnavhome a2:hover{
@@ -73,5 +103,22 @@ body {margin:0;}
 .ul2{
     /* list-style-type: none; */
   /* padding: 0px; */
+}
+#profileImage {
+  float: right;
+  margin-right: 20px;
+  width: 50px;
+  height: 40.39px;
+  /* padding-right: 50px; */
+  border-radius: 50%;
+  background: #ff8400;
+  font-size: 15px;
+  color: #fff;
+  text-align: center;
+  line-height: 150px;
+  margin: 5px 10px  ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>

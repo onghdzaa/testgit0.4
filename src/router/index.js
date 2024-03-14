@@ -149,7 +149,46 @@ const routes = [
                         // which is lazy-loaded when the route is visited.
                         component: () => import(/* webpackChunkName: "about" */ '../components/Logintest-web.vue')
                       },
-    
+                      {
+                        path: '/selectmap1',
+                        name: 'selectmap1',
+                        //route level code-splitting
+                        // this generates a separate chunk (about.[hash].js) for this route
+                          // which is lazy-loaded when the route is visited.
+                          component: () => import(/* webpackChunkName: "about" */ '../components/Map-web1.vue')
+                        },
+                        {
+                          path: '/selectmap2',
+                          name: 'selectmap2',
+                          //route level code-splitting
+                          // this generates a separate chunk (about.[hash].js) for this route
+                            // which is lazy-loaded when the route is visited.
+                            component: () => import(/* webpackChunkName: "about" */ '../components/Map-web2.vue')
+                          },
+                          {
+                            path: '/selectmap3',
+                            name: 'selectmap3',
+                            //route level code-splitting
+                            // this generates a separate chunk (about.[hash].js) for this route
+                              // which is lazy-loaded when the route is visited.
+                              component: () => import(/* webpackChunkName: "about" */ '../components/Map-web3.vue')
+                            },
+                            {
+                              path: '/selectmap4',
+                              name: 'selectmap4',
+                              //route level code-splitting
+                              // this generates a separate chunk (about.[hash].js) for this route
+                                // which is lazy-loaded when the route is visited.
+                                component: () => import(/* webpackChunkName: "about" */ '../components/Map-web4.vue')
+                              },
+                              {
+                                path: '/citynextreview',
+                                name: 'citynextreview',
+                                //route level code-splitting
+                                // this generates a separate chunk (about.[hash].js) for this route
+                                  // which is lazy-loaded when the route is visited.
+                                  component: () => import(/* webpackChunkName: "about" */ '../components/Reviewmain-web.vue')
+                                },
 ]
 
 const router = createRouter({

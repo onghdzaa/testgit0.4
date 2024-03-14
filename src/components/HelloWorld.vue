@@ -4,7 +4,7 @@
     <div class="hello1">
     <!-- <h1>{{ msg }}</h1> -->
     <!-- <div style="width: 100%; height: 10%;"> </div> -->
-    <h3 style="font-size:4vw;">Request for Specific info</h3>
+    <h3 >Request for Specific info</h3>
     <ul>
      
  
@@ -71,6 +71,7 @@ export default {
   //  props: {
   //   msg: String
   // },
+
   data() {
     return {  
     imgmain: require("../assets/icon/LM.png"),
@@ -202,6 +203,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
+ .root *{
+    box-sizing:content-box;
+  }
 .root{
   position: relative;
 }
@@ -215,6 +219,9 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.hello1 h3{
+  font-size:3vw;
 }
 // .modal > div{
 //   background-color: white;
@@ -297,6 +304,7 @@ h3 {
   margin: 40px 0 0;
 color: white;}
 .hello1 ul {
+  display: inline;
   list-style-type: none;
   padding: 0;
 }

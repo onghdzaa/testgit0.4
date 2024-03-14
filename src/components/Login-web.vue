@@ -19,13 +19,13 @@
         </nav>
        
       </div> <p>CHOOSE {{ active }}</p> -->
-      <div class="container">
+      <div class="containerlogin">
         <!-- <ul><label for="uname"><b>Username</b></label></ul> -->
         <input type="text" id="logintext" placeholder="Enter Username" name="uname" required>
 
         <!-- <ul><label for="psw"><b>Password</b></label></ul> -->
          <input type="password" id="loginpass" placeholder="Enter Password" name="psw" required>
-        <div class="container">
+        <div class="containerlogin">
           <div class="remem" style="float: left; padding-left: 10%; padding-top: 4%;">
           <input type="checkbox" checked="checked" name="remember"> Remember me
           </div>
@@ -369,7 +369,7 @@ background-image:url(../assets/img/BG1.png) ; */
   gap: 5%;
   /* padding-bottom: 10%; */
 }
-  .container  input[type=text], .container input[type=password] {
+  .containerlogin  input[type=text], .containerlogin input[type=password] {
       border-radius: 25px;
       margin-top: 10px;
       height: 2rem;
@@ -379,10 +379,10 @@ background-image:url(../assets/img/BG1.png) ; */
       padding-left: 14px;
       font-weight: 600;
     }
-    li {
+    /* li {
   display: inline-block;
   margin: 0px 30px 0 250px;
-}
+} */
 /* Darker background on mouse-over */
 .btn2:hover {
   background-color: RoyalBlue;
@@ -402,11 +402,11 @@ background-image:url(../assets/img/BG1.png) ; */
       border-radius: 3px;
       margin-left: 1rem;
 }
-ul {
+/* ul {
   list-style-type: none;
   padding: 10px;
-}
-.container {
+} */
+.containerlogin {
   padding: 0px;
 }
   </style>

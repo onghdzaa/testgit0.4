@@ -10,7 +10,7 @@
     </div>
   <div class="leftcolumncitynext"> <div class="ardcitynextfix1">
     <div class="cardcitynext">
-      <Cityimg></Cityimg>
+      <Cityimg @popupcityweb="popupwebz"></Cityimg>
     </div></div>
     <div class="ardcitynextfix">
     <div class="cardcitynext">
@@ -19,7 +19,7 @@
   </div>
     <div class="cardcitynext">
         <h2>Facilities</h2>
-        <Cityimgfac></Cityimgfac>
+        <Cityimgfac @popupcityweb="popupwebz"></Cityimgfac>
     </div>
   </div>
 
@@ -27,7 +27,11 @@
 <div class="navbar">
     <navbar></navbar></div>
 <!-- <Menu></Menu> -->
-
+<div id="myModal" class="modal1" v-if="isOpen">
+  <span @click="closepop()" class="close">&times;</span>
+  <img class="modal-content" v-bind:src="imgsrcpop" >
+  <div id="caption"></div>
+</div>
 </template>
 <script>
   import navbar from '@/components/Navbar-web.vue';
@@ -39,6 +43,10 @@ import Navtop from '@/components/Nav-home.vue';
   export default {
     //const:isOpen,
     // var: isOpen,
+    data(){
+      return {isOpen: false,
+      };
+    },
     components: {
         Menu,
     Citytext,
@@ -46,6 +54,15 @@ import Navtop from '@/components/Nav-home.vue';
     Cityimgfac,
     navbar,
     Navtop
+  },
+  methods:{
+    closepop(){
+      this.isOpen= false;
+    },
+    popupwebz(src){
+        this.imgsrcpop=src
+      this.isOpen= true;
+    }
   }
 }
 </script>
@@ -70,7 +87,66 @@ body {
   padding-left: 20px;
   grid-template-rows: auto auto;
 }
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  /* width: 2000px;
+  background-color: aqua; */
+}
 
+#myImg:hover {opacity: 0.7;}
+* {
+  box-sizing: border-box;
+}
+.modal1 {
+   /* display: none;     */
+   align-items: center;
+   justify-content: center;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
 /* Right column */
 .centercolumncitynext {
   float: left;

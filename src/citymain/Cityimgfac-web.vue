@@ -1,11 +1,11 @@
 <template>
     <div class="grid-containers">
       <div class="item1s">
-        <img src="..\assets\img\F2.png">
+        <img src="..\assets\img\F2.png" @click="imgpopimgweb(require('../assets/img/F2.png'))" id="myImg" >
     </div>
-      <div class="item2s"><img src="..\assets\img\F3.png"></div>
-      <div class="item3s"><img src="..\assets\img\F5.png"></div>  
-      <div class="item4s"><img src="..\assets\img\F6.png"></div>
+      <div class="item2s"><img @click="imgpopimgweb(require('../assets/img/F3.png'))" src="..\assets\img\F3.png"  id="myImg" ></div>
+      <div class="item3s"><img src="..\assets\img\F5.png" @click="imgpopimgweb(require('../assets/img/F5.png'))" id="myImg" ></div>  
+      <div class="item4s"><img src="..\assets\img\F6.png" @click="imgpopimgweb(require('../assets/img/F6.png'))" id="myImg" ></div>
    
     
       
@@ -13,6 +13,14 @@
     </div>
     </template>
     <script>
+    export default {
+  methods:{
+    imgpopimgweb(src){
+  this.$emit('popupcityweb',src);
+console.log("../assets/img/1pm.jpg");
+},
+  },
+}
     </script>
     <style>
     .grid-containers {

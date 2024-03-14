@@ -5,11 +5,11 @@
 src="https://www.youtube.com/embed/QhUfEQUIC50?si=j07LfHi86uOz0Y75">
 </iframe> 
 </div>
-  <div class="itemcityimg2"><img class="imgcityimg" src="../assets/img/1pm.jpg"></div>
-  <div class="itemcityimg3"><img class="imgcityimg" src="../assets/img/2pm.jpg"></div>  
-  <div class="itemcityimg4"><img class="imgcityimg" src="../assets/img/3pm.jpg"></div>
-  <div class="itemcityimg5"><img class="imgcityimg" src="../assets/img/4pm.jpg"></div>
-  <div class="itemcityimg6"><img class="imgcityimg" src="../assets/img/5pm.jpg"></div>
+  <div class="itemcityimg2"><img @click="imgpopimgweb(require('../assets/img/1pm.jpg'))" id="myImg" class="imgcityimg" src="../assets/img/1pm.jpg"></div>
+  <div class="itemcityimg3"><img @click="imgpopimgweb(require('../assets/img/2pm.jpg'))" id="myImg" class="imgcityimg" src="../assets/img/2pm.jpg"></div>  
+  <div class="itemcityimg4"><img @click="imgpopimgweb(require('../assets/img/3pm.jpg'))" id="myImg" class="imgcityimg" src="../assets/img/3pm.jpg"></div>
+  <div class="itemcityimg5"><img @click="imgpopimgweb(require('../assets/img/4pm.jpg'))"  id="myImg" class="imgcityimg" src="../assets/img/4pm.jpg"></div>
+  <div class="itemcityimg6"><img @click="imgpopimgweb(require('../assets/img/5pm.jpg'))" id="myImg" class="imgcityimg" src="../assets/img/5pm.jpg"></div>
   <div class="itemcityimg7">
     <img class="imgcityimg1" src="../assets/img/5pm.jpg" >
       <div class="centercityimg">See all</div>
@@ -19,6 +19,14 @@ src="https://www.youtube.com/embed/QhUfEQUIC50?si=j07LfHi86uOz0Y75">
 </div>
 </template>
 <script>
+ export default {
+  methods:{
+    imgpopimgweb(src){
+  this.$emit('popupcityweb',src);
+console.log("../assets/img/1pm.jpg");
+},
+  },
+}
 </script>
 <style>
 .grid-container {

@@ -2,6 +2,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <div class="row">
+
   <div class="column" >
  <div class="video">
 <iframe width="100%" height="70%"
@@ -10,8 +11,8 @@ src="https://www.youtube.com/embed/QhUfEQUIC50?si=j07LfHi86uOz0Y75">
 
 
     <div class="gallery">
-       
-  <img @click="myFunction('../assets/img/1pm.jpg')" id="myImg" src="../assets/img/1pm.jpg" width="100%" height="100">
+      <!-- @click="$emit('close')" -->
+  <img @click="imgpopimgweb(require('../assets/img/1pm.jpg'))" id="myImg" src="../assets/img/1pm.jpg" width="100%" height="100">
   
   <!-- <div id="myModal" class="modal">
   <span class="close">&times;</span>
@@ -22,18 +23,18 @@ src="https://www.youtube.com/embed/QhUfEQUIC50?si=j07LfHi86uOz0Y75">
 
 <div class="gallery">
   
-    <img id="myImg" src="../assets/img/2pm.jpg" width="100%" height="100">
+    <img @click="imgpopimgweb(require('../assets/img/2pm.jpg'))" id="myImg" src="../assets/img/2pm.jpg" width="100%" height="100">
 </div>
 
 
 <div class="gallery">
   
-    <img src="../assets/img/3pm.jpg" width="100%" height="100">
+    <img @click="imgpopimgweb(require('../assets/img/3pm.jpg'))" id="myImg" src="../assets/img/3pm.jpg"  width="100%" height="100">
   </div>
   <div class="gallery">
        
       
-         <img src="../assets/img/4pm.jpg" width="100%" height="100">
+         <img @click="imgpopimgweb(require('../assets/img/4pm.jpg'))" id="myImg" src="../assets/img/4pm.jpg" width="100%" height="100">
       
      </div>
      <div class="gallery">
@@ -84,10 +85,9 @@ src="https://www.youtube.com/embed/QhUfEQUIC50?si=j07LfHi86uOz0Y75">
   <button class="buttomloacation">Read More >></button></div></RouterLink>
 </div>
 
-</div>
-<div class="modal" v-if="isOpen"><img src="../assets/img/google.png" alt="">
-  </div>
 
+
+</div>
 </template>
 <script setup>
 // Get the modal
@@ -113,12 +113,14 @@ src="https://www.youtube.com/embed/QhUfEQUIC50?si=j07LfHi86uOz0Y75">
 </script>
 <script>
 // document,q
+
 import StarRating from 'vue-star-rating'
+// import { defineEmits } from 'vue';
 export default {
+  props:["ispop","popsrc"],
   data() {
     return {  
-      isOpen: false,
-      imgpop:"",
+ 
     // modal: document.getElementById("myModal"),
     // modalImg : document.getElementById("img01"),
     // captionText : document.getElementById("caption")
@@ -142,20 +144,26 @@ export default {
   },
   // Get the modal
 
+
   // name: 'HomeView',
   components: {
     StarRating
   },
   methods: {
     
-  myFunction(src){
+//   myFunction(){
     
-    this.isOpen=true;
-console.log(this.isOpen);
-this.imgpop=src
-console.log(this.imgpop);
-}
-}
+//     // this.isOpen=true;
+// console.log(this.ispop);
+// // this.imgpop=src
+// console.log(this.popsrc);
+// }
+imgpopimgweb(src){
+  this.$emit('popupcityweb',src);
+console.log("../assets/img/1pm.jpg");
+},
+},
+
 }
 
 
@@ -166,7 +174,7 @@ console.log(this.imgpop);
 // }
 
 
-
+// defineEmits("myFunctionweb")
 
 </script>
 <style>
@@ -178,11 +186,12 @@ console.log(this.imgpop);
 
 
 
-* {
-  box-sizing: border-box;
-}
 .text{
   text-align: left;
+}
+.popuppagelocation{
+  width: 100%;
+  height: 100%;
 }
 /* .test{
   max-width:600px ;
@@ -262,19 +271,9 @@ float: left;
   width: 20%;
   height: auto;
 }
-.modal{
-  /* display: none; Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-}
+
+
+
 .buttomloacation{
   /* display: flex; */
   width: 20%;
@@ -346,16 +345,6 @@ div.gallery img {
   height: 400px;
 }
 
-#caption {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  text-align: center;
-  color: #ccc;
-  padding: 10px 0;
-  height: 150px;
-}
 @media only screen and (max-width: 600px) {
   
   .column.middle {

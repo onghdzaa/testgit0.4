@@ -83,10 +83,12 @@ export default {
         this.countnum=1;
     document.getElementById(id).style.backgroundColor = "#106404"; 
     this.imgmain=require("../assets/icon/S1-2.gif");
+document.getElementById(id).style.color = "white";
       }else{
         this.countnum=0;
         this.imgmain=require("../assets/icon/S1-1.gif");
         document.getElementById(id).style.backgroundColor = "rgba(255, 255, 255, 0.8)";
+            document.getElementById(id).style.color = "#2c3e50";
       }
     },
     chanecolor1(id){
@@ -95,10 +97,12 @@ export default {
         this.countnum1=1;
     document.getElementById(id).style.backgroundColor = "#106404"; 
     this.imgmain1=require("../assets/icon/S2-2.gif");
+    document.getElementById(id).style.color = "white";
       }else{
         this.countnum1=0;
         this.imgmain1=require("../assets/icon/S2-1.gif");
         document.getElementById(id).style.backgroundColor = "rgba(255, 255, 255, 0.8)";
+        document.getElementById(id).style.color = "#2c3e50";
       }
     },
     chanecolor2(id){
@@ -107,10 +111,12 @@ export default {
         this.countnum2=1;
     document.getElementById(id).style.backgroundColor = "#106404"; 
     this.imgmain2=require("../assets/icon/S3-2.gif");
+    document.getElementById(id).style.color = "white";
       }else{
         this.countnum2=0;
         this.imgmain2=require("../assets/icon/S3-1.gif");
         document.getElementById(id).style.backgroundColor = "rgba(255, 255, 255, 0.8)";
+        document.getElementById(id).style.color = "#2c3e50";
       }
     }
     ,    chanecolor3(id){
@@ -119,10 +125,12 @@ export default {
         this.countnum3=1;
     document.getElementById(id).style.backgroundColor = "#106404"; 
     this.imgmain3=require("../assets/icon/S4-2.gif");
+    document.getElementById(id).style.color = "white";
       }else{
         this.countnum3=0;
         this.imgmain3=require("../assets/icon/S4-1.gif");
         document.getElementById(id).style.backgroundColor = "rgba(255, 255, 255, 0.8)";
+        document.getElementById(id).style.color = "#2c3e50";
       }
     }
     ,    chanecolor4(id){
@@ -131,10 +139,12 @@ export default {
         this.countnum4=1;
     document.getElementById(id).style.backgroundColor = "#106404"; 
     this.imgmain4=require("../assets/icon/S12-2.gif");
+    document.getElementById(id).style.color = "white";
       }else{
         this.countnum4=0;
         this.imgmain4=require("../assets/icon/S12-1.gif");
         document.getElementById(id).style.backgroundColor = "rgba(255, 255, 255, 0.8)";
+        document.getElementById(id).style.color = "#2c3e50";
       }
     }
     ,    chanecolor5(id){
@@ -143,10 +153,12 @@ export default {
         this.countnum5=1;
     document.getElementById(id).style.backgroundColor = "#106404"; 
     this.imgmain5=require("../assets/icon/S10-2.gif");
+    document.getElementById(id).style.color = "white";
       }else{
         this.countnum5=0;
         this.imgmain5=require("../assets/icon/S10-1.gif");
         document.getElementById(id).style.backgroundColor = "rgba(255, 255, 255, 0.8)";
+        document.getElementById(id).style.color = "#2c3e50";
       }
     }
        
@@ -277,4 +289,12 @@ h2 {
       text-align: center;
       line-height: 75px;
       font-size: 30px;
-    } */</style>
+    
+    } */
+    @media only screen and (max-width: 600px) {
+ 
+.grid-itemmenumap {
+  font-size: 3vw;
+}
+    }
+    </style>

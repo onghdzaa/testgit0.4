@@ -13,7 +13,7 @@
     <div class="leftandringtcityw">
   <div class="leftcolumncityw">
   <div class="cardcityw">
-      <Location></Location>
+      <Location @popupcityweb="popupwebz"></Location>
     </div>
   </div>
   <div class="rightcolumncityw">
@@ -59,7 +59,11 @@
     <navbar></navbar></div>
     <div class="navbarfixcityw"><Navtop></Navtop></div>
 <!-- <Menu></Menu> -->
-
+<div id="myModal" class="modal1" v-if="isOpen">
+  <span @click="closepop()" class="close">&times;</span>
+  <img class="modal-content" v-bind:src="imgsrcpop" >
+  <div id="caption"></div>
+</div>
 </template>
 <script>
   import navbar from '@/components/Navbar-web.vue';
@@ -68,6 +72,12 @@ import Location from '@/components/Location-web.vue';
 import Review from '@/components/Review-web.vue';
 import Navtop from '@/components/Nav-home.vue';
   export default {
+    data(){
+      return {isOpen: false,
+        imgsrcpop:require("../assets/img/1pm.jpg"),
+        imgsrc1:"",
+            imgsrc:''};
+    },
     //const:isOpen,
     // var: isOpen,
     components: {
@@ -75,8 +85,24 @@ import Navtop from '@/components/Nav-home.vue';
     Location,
     Review,
     navbar,
-    Navtop
-  }
+    Navtop,
+    
+  },
+  methods:{
+    closepop(){
+      this.isOpen= false;
+    },
+    popupwebz(src){
+
+      // this.imgsrcpop ="'" + src + "'" ;
+        // document.getElementById("imgsrcpop").src=this.imgsrcpop
+        this.imgsrcpop=src
+      // imgsrc1=src;
+      this.isOpen= true;
+      // this.imgsrcpop=require(src)  
+   
+    }
+  },
 }
 </script>
 <style>
@@ -139,6 +165,66 @@ body {
   /* min-width: 200px; */
   padding-left: 4%;
   height: auto;
+}
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  /* width: 2000px;
+  background-color: aqua; */
+}
+
+#myImg:hover {opacity: 0.7;}
+* {
+  box-sizing: border-box;
+}
+.modal1 {
+   /* display: none;     */
+   align-items: center;
+   justify-content: center;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
 }
 .rightcolumncityw {
    /* position: ; */

@@ -201,11 +201,11 @@ input[type="radio"]{
     
     background-color: #2600ff;
   }
-  p{
+  /* p{
     font-size: 22px;
-    font-weight: bold;
+    font-weight: bold;  } */
     /* color: #7d9098; */
-  }
+
   p b{
     color: #fff;
     display: inline-block;
@@ -272,10 +272,10 @@ margin: 0px 10px 10px 0px;}
       padding-left: 14px;
       font-weight: 600;
     }
-    li {
+    /* li {
   display: inline-block;
   margin: 0px 30px 0 250px;
-}
+} */
 /* Darker background on mouse-over */
 .btnregister:hover,.btn1register:hover {
   background-color: #302c74;
@@ -301,10 +301,10 @@ margin: 0px 10px 10px 0px;}
             /* float: right;  */
            
 }
-ul {
+/* ul {
   list-style-type: none;
   padding: 10px;
-}
+} */
 .containerlogin {
   padding: 20px;
 }

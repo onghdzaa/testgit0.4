@@ -316,4 +316,11 @@ li {
 a {
   color: #42b983;
 }
+@media only screen and (max-width: 600px) {
+ul li {
+  display: inline-block;
+  margin: 0 5px;
+  width: 25%;
+}
+}
 </style>

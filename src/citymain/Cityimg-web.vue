@@ -11,8 +11,8 @@ src="https://www.youtube.com/embed/QhUfEQUIC50?si=j07LfHi86uOz0Y75">
   <div class="itemcityimg5"><img @click="imgpopimgweb(require('../assets/img/4pm.jpg'))"  id="myImg" class="imgcityimg" src="../assets/img/4pm.jpg"></div>
   <div class="itemcityimg6"><img @click="imgpopimgweb(require('../assets/img/5pm.jpg'))" id="myImg" class="imgcityimg" src="../assets/img/5pm.jpg"></div>
   <div class="itemcityimg7">
-    <img class="imgcityimg1" src="../assets/img/5pm.jpg" >
-      <div class="centercityimg">See all</div>
+    <RouterLink to="/allimg"><img class="imgcityimg1" src="../assets/img/5pm.jpg" ><div class="centercityimg">See all</div></RouterLink>
+      
   </div>
 
 

@@ -3,11 +3,15 @@
     <div class="topnavhome">
         <div class="iconleft">    
           <a href="#contact" style="padding: 5px;"> <div class="profileImagez"><div id="profileImage">{{ initials }}</div>{{firstName}} {{ lastName }}</div> </a> 
-      <a href="#contact"> <img class="icon1" src="../assets/icon/lg1.png"><div class="ul2"> LANGUAGE</div></a> 
+          
+      <a @click="openTran()"> <img  class="icon1" src="../assets/icon/lg1.png"><div class="ul2"> LANGUAGE</div></a> 
+      
       <a href="#contact"> <img class="icon1" src="../assets/icon/sound1.png"><div class="ul2"> AUDIO</div></a>
       <a href="#contact"> <img class="icon1" src="../assets/icon/size1.png"><div class="ul2"> FONT SIZE</div></a>
-      <a href="#home"> <img class="icon1" src="../assets/icon/home1.png"><div class="ul2"> HOME </div></a>
-     
+      <a href="/select"> <img class="icon1" src="../assets/icon/home1.png"><div class="ul2"> HOME </div></a>
+     <div v-show="tran"  >
+      <div id="google_translate_element"></div>
+      xxxxxssssssxxxxxxxxxx</div>
     </div> 
 
       <!-- <a href="#"><i class="../assets/img/twitter.png"></i> Search</a>  -->
@@ -28,13 +32,15 @@
 //   var intials = firstName.charAt(0) + lastName.charAt(0);
 //   var profileImage = $('#profileImage').text(intials);
 // });
-
+// import call from 'public/index.html'
+// import { defineEmits } from 'vue';
 export default {
   data() {
     return {  
       firstName: 'John',
       lastName: 'Doe',
        isOpen:true,
+       tran:false,
     };
   },
   computed:{
@@ -43,10 +49,33 @@ export default {
     }
   },
   methods: {
+ openTran(){
+  console.log("xxx");
+  console.log(this.tran);
+  if(this.tran==true){
+    this.tran=false;
+  }else{
+    this.tran=true;
+    // window.googleTranslateElementInit()
+    // defineEmits("googleTranslateElementInit")
+    // window.google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    // call.googleTranslateElementInit()
+    // openTran(googleTranslateElementInit);
+  }
 
+console.log(this.tran);
+
+ }
     }
+    //   new google.translate.TranslateElement({
+    //     pageLanguage: 'en', // Set page default language
+    //     layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    //   }, 'google_translate_element');
+    // }
+    // }
     
 }
+
 
 </script>
 

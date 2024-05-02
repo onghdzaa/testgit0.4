@@ -34,7 +34,7 @@ src="https://www.youtube.com/embed/QhUfEQUIC50?si=j07LfHi86uOz0Y75">
   <div class="gallery">
        
       
-         <img @click="imgpopimgweb(require('../assets/img/4pm.jpg'))" id="myImg" src="../assets/img/4pm.jpg" width="100%" height="100">
+         <img @click="imgpopimgweb(require('../assets/img/4pm.jpg'))" id="myImg" v-bind:src="img" width="100%" height="100">
       
      </div>
      <div class="gallery">
@@ -113,14 +113,22 @@ src="https://www.youtube.com/embed/QhUfEQUIC50?si=j07LfHi86uOz0Y75">
 </script>
 <script>
 // document,q
-
+import  axios  from 'axios';
 import StarRating from 'vue-star-rating'
 // import { defineEmits } from 'vue';
 export default {
   props:["ispop","popsrc"],
   data() {
     return {  
- 
+      name :'xxxx',
+    description :'',
+     username:'suksri_1',
+    email:'suksri@hotmail.com',
+   
+     img:'http://pm2.derive.co.th/tourism/',
+    // img1:'http://pm2.derive.co.th/tourism/',
+    // img2:'http://pm2.derive.co.th/tourism/',
+    // img3:'http://pm2.derive.co.th/tourism/'
     // modal: document.getElementById("myModal"),
     // modalImg : document.getElementById("img01"),
     // captionText : document.getElementById("caption")
@@ -142,6 +150,17 @@ export default {
 
     };
   },
+  created(){
+axios.get('http://pm2.derive.co.th/tourism/api/touristSites/1').then((response) =>{
+  console.log(response.data[0].imagesOfTouristSite);
+   this.img=this.img.concat(response.data[0].imagesOfTouristSite[0].imagePath);
+  // this.img1=this.img.concat(response.data[0].imageName);
+  // this.img2=this.img.concat(response.data[0].imageName);
+  // this.img3=this.img.concat(response.data[0].imageName);
+  // console.log(this.img);
+}  )
+// 
+      },
   // Get the modal
 
 

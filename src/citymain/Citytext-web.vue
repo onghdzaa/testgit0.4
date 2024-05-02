@@ -45,7 +45,7 @@
     };
   },
       created(){
-axios.get('http://pm2.derive.co.th/tourism/api/touristSites/1').then(response =>{
+axios.get('http://pm2.derive.co.th/tourism/api/touristSites/1').then((response) =>{
   console.log(response)
   console.log(response.data[0].engName);
   this.name=response.data[0].engName;

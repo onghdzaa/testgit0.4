@@ -5,23 +5,26 @@
     <h2 style="text-align: center;">CITY & CULTURE</h2>
     <p style="text-align: center;">NORTHEASTERN REGION</p>
     <div class="laout1me">
+      Sort by :
       <select style="width: 50%; height: 34%;" name="subject" id="subject">
         <option value="" selected="selected">Select subject</option>
+        <option value="saab">Disstance from regional hub</option>
       </select>
-      <div class="review">
+      <!-- <div class="review">
 
-      </div>
+      </div> -->
     </div>
     <div class="grid-containermenumap">
-      <div class="grid-item1menumap">1
-        <input type="range" min="1" max="100" value="50">
+      <div class="grid-item1menumap">
+      <input type="range" min="0" max="500" step="1" v-model="value"> {{value}} KM
+      
      
       <div id="testcolor" @click="chanecolor('testcolor')"  class="grid-itemmenumap"><img class="sizeimgmenumap"  v-bind:src="imgmain">Parking for prople with disabilities</div>
       <div id="testcolor1" @click="chanecolor1('testcolor1')"  class="grid-itemmenumap"><img class="sizeimgmenumap"  v-bind:src="imgmain1">Step - free access to the building / property / site (possbly via elevator / ramps)</div>
-      <div id="testcolor2" @click="chanecolor2('testcolor2')"  class="grid-itemmenumap"><img class="sizeimgmenumap" v-bind:src="imgmain2">All other rooms and facilities that van be used by the guest can be reached without steps or with a lift / ramp.</div>
+      <div id="testcolor2" @click="chanecolor2('testcolor2')"  class="grid-itemmenumap"><img class="sizeimgmenumap" v-bind:src="imgmain2">All other rooms and facilities that can be used by the guest can be reached without steps or with a lift / ramp.</div>
       <div id="testcolor3" @click="chanecolor3('testcolor3')"  class="grid-itemmenumap"><img class="sizeimgmenumap" v-bind:src="imgmain3">Accessible Toilet by Wheelchair</div>
       <div id="testcolor4" @click="chanecolor4('testcolor4')"  class="grid-itemmenumap"><img class="sizeimgmenumap"  v-bind:src="imgmain4">Requested Assistance is possible (request in advance)</div>
-      <div id="testcolor5" @click="chanecolor5('testcolor5')"  class="grid-itemmenumap"><img class="sizeimgmenumap" v-bind:src="imgmain5">Request assistance is possible</div>
+      <!-- <div id="testcolor5" @click="chanecolor5('testcolor5')"  class="grid-itemmenumap"><img class="sizeimgmenumap" v-bind:src="imgmain5">Request assistance is possible</div> -->
 
       <!-- <div  id="testcolor1" class="grid-itemmenumap"><img class="sizeimgmenumap" src="../assets/icon/S7-1.png">1</div>
       <div id="testcolor2" class="grid-itemmenumap"><img class="sizeimgmenumap" src="../assets/icon/S7-1.png">1</div>
@@ -58,6 +61,7 @@
 export default {
   data() {
     return {  
+      value: 50,
     imgmain: require("../assets/icon/S1-1.gif"),
     imgmain1: require("../assets/icon/S2-1.gif"),
     imgmain2: require("../assets/icon/S3-1.gif"),
@@ -77,6 +81,7 @@ export default {
     };
   },
   methods: {
+    
     chanecolor(id){
       if(this.countnum==0){
         // console.log(id);

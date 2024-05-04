@@ -5,7 +5,7 @@
 
   <div class="column" >
  <div class="video">
-<iframe width="100%" height="70%"
+<iframe @click="imgpopimgweb()" width="100%" height="70%"
 src="https://www.youtube.com/embed/QhUfEQUIC50?si=j07LfHi86uOz0Y75">
 </iframe> 
 

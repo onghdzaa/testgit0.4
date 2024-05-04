@@ -50,6 +50,13 @@ export default {
   },
   methods: {
  openTran(){
+  // window.googleTranslateElementInit()
+  
+      
+        window.google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        console.log("xxxs");
+      
+    
   console.log("xxx");
   console.log(this.tran);
   if(this.tran==true){
@@ -58,7 +65,7 @@ export default {
     this.tran=true;
     // window.googleTranslateElementInit()
     // defineEmits("googleTranslateElementInit")
-    // window.google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+//  window.google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
     // call.googleTranslateElementInit()
     // openTran(googleTranslateElementInit);
   }
@@ -129,10 +136,7 @@ body {margin:0;}
   background-color: #ddd;
   color: black;
 }
-.ul2{
-    /* list-style-type: none; */
-  /* padding: 0px; */
-}
+
 #profileImage {
   float: right;
   margin-right: 20px;
